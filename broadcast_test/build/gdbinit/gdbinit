@@ -1,0 +1,2 @@
+source D:/Espressif/hud/broadcast_test/build/gdbinit/symbols
+source D:/Espressif/hud/broadcast_test/build/gdbinit/connect

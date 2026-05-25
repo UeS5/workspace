@@ -1,0 +1,2 @@
+source D:/Espressif/hud/hud_display/build/bootloader/gdbinit/symbols
+source D:/Espressif/hud/hud_display/build/bootloader/gdbinit/connect
