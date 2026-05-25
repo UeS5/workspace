@@ -37,14 +37,14 @@
 #define TWAI_ENGINELOAD_TAG     0x04
 
 #define TIMEOUT_IN_MS 10000
-#define COOLDOWN_TIME_MS 3000
+#define COOLDOWN_TIME_MS 5000
 #define TWAI_CHECK_TIME_MS 5000
 
 #define RED_LED GPIO_NUM_4
 #define BLUE_LED GPIO_NUM_5
 #define GREEN_LED GPIO_NUM_7
 
-#define QUERY_INTERVAL 400 
+#define QUERY_INTERVAL 200 
 
 typedef struct {
 	uint32_t id;
@@ -204,20 +204,20 @@ esp_err_t esp_now_stop(void) {
 	if (wifi_initialized) {
 		(void)esp_wifi_stop();
 		vTaskDelay(pdMS_TO_TICKS(20));
-		err = esp_wifi_deinit();
+		err = esp_wifi_deinit(); // light sleep icin gereksiz dendi
 		vTaskDelay(pdMS_TO_TICKS(20));
 		wifi_initialized = false;
 	}
 
-	esp_err_t nvs_err = nvs_flash_deinit();
+	esp_err_t nvs_err = nvs_flash_deinit(); // light sleep icin gereksiz dendi
     vTaskDelay(pdMS_TO_TICKS(20));
 
 	if (err != ESP_OK || nvs_err != ESP_OK) { 
-        ESP_LOGE(TAG_ESP_NOW, "ERROR: Failed to deinitialize ESP-NOW: %s", esp_err_to_name(err));
+        ESP_LOGE(TAG_ESP_NOW, ">> ERROR: Failed to deinitialize ESP-NOW. wifi_err=%s nvs_err=%s", esp_err_to_name(err), esp_err_to_name(nvs_err));
         return err != ESP_OK ? err : nvs_err;   
 	}
 	
-	ESP_LOGI(TAG_ESP_NOW, "INFO: ESP-NOW stopped successfully");	
+	ESP_LOGI(TAG_ESP_NOW, ">> INFO: ESP-NOW stopped successfully");	
 	return ESP_OK;
     
 } 
@@ -236,9 +236,9 @@ void vTask_receive_twai(void *pvParameters) {
     for (;;) {
 
         xEventGroupWaitBits(TASK_REG, TASK_RECEIVE_TWAI_FLAG, pdFALSE, pdFALSE, portMAX_DELAY);
+		last_valid_packet_time = esp_timer_get_time();
 
         while (xEventGroupGetBits(TASK_REG) & TASK_RECEIVE_TWAI_FLAG) {
-			last_valid_packet_time = esp_timer_get_time();
 
             if (xQueueReceive(queue_twai, &msg, pdMS_TO_TICKS(10)) == pdPASS) {
                 
@@ -320,11 +320,11 @@ void vTask_send_query(void *pvParameters) {
 			if (query_type == false) {
 				esp_err_t err = twai_node_transmit(node_hdl, &speed_query, 0); 
 				query_type = !query_type;		
-				ESP_LOGI(TAG_TWAI, ">> Info: Speed query has been sent. Return value is: %s", esp_err_to_name(err));
+				ESP_LOGI(TAG_TWAI, ">> Info: speed_query sent: %s", esp_err_to_name(err));
 			} else {
 				esp_err_t err = twai_node_transmit(node_hdl, &engine_load_query, 0);
 				query_type = !query_type;
-				ESP_LOGI(TAG_TWAI, ">> Info: Engine load query has been sent. Return value is: %s", esp_err_to_name(err)); 
+				ESP_LOGI(TAG_TWAI, ">> Info: engLoad_query sent: %s", esp_err_to_name(err)); 
 			}	
 			
 			vTaskDelay(pdMS_TO_TICKS(QUERY_INTERVAL));
@@ -368,9 +368,9 @@ void vTask_esp_now_send_data(void *args) {
 				pulse_led(GREEN_LED);
 
 				if (err == ESP_OK) {
-					ESP_LOGI(TAG_ESP_NOW, ">> Info: ESP-NOW packet sent successfully! Speed: %d, Engine Load: %d", pkt.speed_data, pkt.engLoad_data);
+					ESP_LOGI(TAG_ESP_NOW, ">> Info: ESP-NOW packet sent! Speed: %d, Engine Load: %d", pkt.speed_data, pkt.engLoad_data);
 				} else {
-					ESP_LOGE(TAG_ESP_NOW, ">> Warning: ESP-NOW packet could not be sent. Error> %s", esp_err_to_name(err));
+					ESP_LOGE(TAG_ESP_NOW, ">> Warning: ESP-NOW packet could not be sent. Error: %s", esp_err_to_name(err));
 				}
 
 			}
@@ -436,11 +436,10 @@ void vTask_idle_mode(void *pvParameters) {
                 xEventGroupClearBits(TASK_REG, TASK_SEND_QUERY_FLAG);
                 xEventGroupClearBits(TASK_REG, TASK_ESP_NOW_SEND_DATA_FLAG);
                 xEventGroupClearBits(TASK_REG, TASK_RECEIVE_TWAI_FLAG);
-
-                (void)esp_now_stop();               
-                (void)twai_node_disable(node_hdl); 
-
-				ESP_LOGW(TAG_IDLE_MODE, "WARNING: No signal. Stopping ESP-NOW and Receive. Starting over!");       
+              
+                (void)twai_node_disable(node_hdl);
+				ESP_LOGI(TAG_IDLE_MODE, ">> INFO: Disabled twai node"); 
+       
             }
         }
     }
@@ -454,6 +453,8 @@ void app_main(void) {
 
 	queue_twai = xQueueCreate(5, sizeof(rx_queue_msg_t));
 	queue_esp_now = xQueueCreate(1, sizeof(esp_now_data_buffer_t));
+
+	config_gpio();
 	
 	ESP_ERROR_CHECK(twai_new_node_onchip(&node_config, &node_hdl));
 	ESP_ERROR_CHECK(twai_node_register_event_callbacks(node_hdl, &user_cbs, NULL)); 
@@ -465,7 +466,7 @@ void app_main(void) {
 	vTaskDelay(pdMS_TO_TICKS(50));
 
 	if (esp_now_start() != ESP_OK) {
-		ESP_LOGE(TAG_MAIN, "Failed to start ESP-NOW");
+		ESP_LOGE(TAG_MAIN, ">>Error: Failed to start ESP-NOW");
 	}
 
 	vTaskDelay(pdMS_TO_TICKS(50));

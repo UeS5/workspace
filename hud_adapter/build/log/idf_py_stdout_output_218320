@@ -1,0 +1,743 @@
+Command: /home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python /esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /esp/workspace/hud_adapter/build/hud_adapter.elf /esp/workspace/hud_adapter/build/bootloader/bootloader.elf -m '/home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May 25 2026 17:30:29[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=15b44h ( 88900) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00025b6c vaddr=3fc94000 size=02e04h ( 11780) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00028978 vaddr=40380000 size=076a0h ( 30368) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7c390h (508816) map[0m
+[0;32mI (197) esp_image: segment 4: paddr=000ac3b8 vaddr=403876a0 size=0c870h ( 51312) load[0m
+[0;32mI (206) esp_image: segment 5: paddr=000b8c30 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (213) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (213) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Unicore app[0m
+[0;32mI (232) cpu_start: Pro cpu start user code[0m
+[0;32mI (232) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (232) app_init: Application information:[0m
+[0;32mI (232) app_init: Project name:     hud_adapter[0m
+[0;32mI (236) app_init: App version:      7a608ed-dirty[0m
+[0;32mI (241) app_init: Compile time:     May 25 2026 17:30:23[0m
+[0;32mI (246) app_init: ELF file SHA256:  5a2f2b700...[0m
+[0;32mI (250) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (255) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (259) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (263) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (267) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (273) heap_init: At 3FC9A780 len 00025880 (150 KiB): RAM[0m
+[0;32mI (278) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (284) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (290) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (315) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (321) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (388) pp: pp rom version: 9387209[0m
+[0;32mI (388) net80211: net80211 rom version: 9387209[0m
+[0;32mI (408) wifi:wifi driver task: 3fca1f2c, prio:23, stack:6656, core=0[0m
+[0;32mI (408) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (408) wifi:wifi certification version: v7.0[0m
+[0;32mI (408) wifi:config NVS flash: enabled[0m
+[0;32mI (408) wifi:config nano formatting: disabled[0m
+[0;32mI (418) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (418) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (418) wifi:Init management short buffer num: 32[0m
+[0;32mI (428) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (428) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (438) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (438) wifi:Init static rx buffer num: 10[0m
+[0;32mI (448) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (448) wifi_init: rx ba win: 6[0m
+[0;32mI (448) wifi_init: accept mbox: 6[0m
+[0;32mI (448) wifi_init: tcpip mbox: 32[0m
+[0;32mI (458) wifi_init: udp mbox: 6[0m
+[0;32mI (458) wifi_init: tcp mbox: 6[0m
+[0;32mI (458) wifi_init: tcp tx win: 5760[0m
+[0;32mI (468) wifi_init: tcp rx win: 5760[0m
+[0;32mI (468) wifi_init: tcp mss: 1440[0m
+[0;32mI (468) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (478) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (478) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;33mW (488) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;32mI (518) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[1;31mE (528) wifi:failed to post WiFi event=43 ret=259[0m
+[0;32mI (528) wifi:mode : sta (28:37:2f:50:59:b0)[0m
+[0;32mI (528) wifi:enable tsf[0m
+[1;31mE (528) wifi:failed to post WiFi event=2 ret=259[0m
+[0;32mI (538) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (538) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;32mI (588) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (588) main_task: Returned from app_main()[0m
+[0;32mI (1028) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (1468) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (1908) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (2348) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (2788) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (3228) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (3668) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4108) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4548) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4988) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (5428) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (5868) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (6308) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (6748) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (7188) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (7628) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8068) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8508) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8948) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (9388) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (9828) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (10268) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (10708) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (11148) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (11588) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (12028) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (12468) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x4�ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May 25 2026 17:30:29[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=15b44h ( 88900) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00025b6c vaddr=3fc94000 size=02e04h ( 11780) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00028978 vaddr=40380000 size=076a0h ( 30368) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7c390h (508816) map[0m
+[0;32mI (197) esp_image: segment 4: paddr=000ac3b8 vaddr=403876a0 size=0c870h ( 51312) load[0m
+[0;32mI (206) esp_image: segment 5: paddr=000b8c30 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (213) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (213) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Unicore app[0m
+[0;32mI (232) cpu_start: Pro cpu start user code[0m
+[0;32mI (232) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (232) app_init: Application information:[0m
+[0;32mI (232) app_init: Project name:     hud_adapter[0m
+[0;32mI (236) app_init: App version:      7a608ed-dirty[0m
+[0;32mI (241) app_init: Compile time:     May 25 2026 17:30:23[0m
+[0;32mI (246) app_init: ELF file SHA256:  5a2f2b700...[0m
+[0;32mI (250) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (255) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (259) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (263) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (267) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (273) heap_init: At 3FC9A780 len 00025880 (150 KiB): RAM[0m
+[0;32mI (278) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (284) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (290) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (315) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (321) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (388) pp: pp rom version: 9387209[0m
+[0;32mI (388) net80211: net80211 rom version: 9387209[0m
+[0;32mI (398) wifi:wifi driver task: 3fca1f6c, prio:23, stack:6656, core=0[0m
+[0;32mI (398) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (398) wifi:wifi certification version: v7.0[0m
+[0;32mI (398) wifi:config NVS flash: enabled[0m
+[0;32mI (408) wifi:config nano formatting: disabled[0m
+[0;32mI (408) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (408) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (418) wifi:Init management short buffer num: 32[0m
+[0;32mI (418) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (428) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (428) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (428) wifi:Init static rx buffer num: 10[0m
+[0;32mI (438) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (438) wifi_init: rx ba win: 6[0m
+[0;32mI (448) wifi_init: accept mbox: 6[0m
+[0;32mI (448) wifi_init: tcpip mbox: 32[0m
+[0;32mI (448) wifi_init: udp mbox: 6[0m
+[0;32mI (448) wifi_init: tcp mbox: 6[0m
+[0;32mI (458) wifi_init: tcp tx win: 5760[0m
+[0;32mI (458) wifi_init: tcp rx win: 5760[0m
+[0;32mI (458) wifi_init: tcp mss: 1440[0m
+[0;32mI (468) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (468) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (468) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[1;31mE (508) wifi:failed to post WiFi event=43 ret=259[0m
+[0;32mI (508) wifi:mode : sta (28:37:2f:50:59:b0)[0m
+[0;32mI (508) wifi:enable tsf[0m
+[1;31mE (508) wifi:failed to post WiFi event=2 ret=259[0m
+[0;32mI (508) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (518) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;32mI (568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (568) main_task: Returned from app_main()[0m
+[0;32mI (1008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (1448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (1888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (2328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (2768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (3208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (3648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (5408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (5848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (6288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (6728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (7168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (7608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (9368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (9808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (10248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (10688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (11128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (11568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (12008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (12448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (12888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (13328) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (13768) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (14208) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (14648) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (15088) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (15528) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (15968) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (16408) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (16848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (17288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (17728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (18168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (18608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (19048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (19488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (19928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (20368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (20808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (21248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (21688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (22128) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (22568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (23008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (23448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (23888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (24328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (24768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (25208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (25648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (26088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (26528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (26968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May 25 2026 17:30:29[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=15b44h ( 88900) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00025b6c vaddr=3fc94000 size=02e04h ( 11780) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00028978 vaddr=40380000 size=076a0h ( 30368) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7c390h (508816) map[0m
+[0;32mI (197) esp_image: segment 4: paddr=000ac3b8 vaddr=403876a0 size=0c870h ( 51312) load[0m
+[0;32mI (206) esp_image: segment 5: paddr=000b8c30 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (213) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (213) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Unicore app[0m
+[0;32mI (232) cpu_start: Pro cpu start user code[0m
+[0;32mI (232) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (232) app_init: Application information:[0m
+[0;32mI (232) app_init: Project name:     hud_adapter[0m
+[0;32mI (236) app_init: App version:      7a608ed-dirty[0m
+[0;32mI (241) app_init: Compile time:     May 25 2026 17:30:23[0m
+[0;32mI (246) app_init: ELF file SHA256:  5a2f2b700...[0m
+[0;32mI (250) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (255) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (259) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (263) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (267) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (273) heap_init: At 3FC9A780 len 00025880 (150 KiB): RAM[0m
+[0;32mI (278) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (284) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (290) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (315) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (321) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (388) pp: pp rom version: 9387209[0m
+[0;32mI (388) net80211: net80211 rom version: 9387209[0m
+[0;32mI (398) wifi:wifi driver task: 3fca1f6c, prio:23, stack:6656, core=0[0m
+[0;32mI (398) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (398) wifi:wifi certification version: v7.0[0m
+[0;32mI (398) wifi:config NVS flash: enabled[0m
+[0;32mI (408) wifi:config nano formatting: disabled[0m
+[0;32mI (408) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (408) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (418) wifi:Init management short buffer num: 32[0m
+[0;32mI (418) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (428) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (428) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (428) wifi:Init static rx buffer num: 10[0m
+[0;32mI (438) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (438) wifi_init: rx ba win: 6[0m
+[0;32mI (448) wifi_init: accept mbox: 6[0m
+[0;32mI (448) wifi_init: tcpip mbox: 32[0m
+[0;32mI (448) wifi_init: udp mbox: 6[0m
+[0;32mI (448) wifi_init: tcp mbox: 6[0m
+[0;32mI (458) wifi_init: tcp tx win: 5760[0m
+[0;32mI (458) wifi_init: tcp rx win: 5760[0m
+[0;32mI (458) wifi_init: tcp mss: 1440[0m
+[0;32mI (468) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (468) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (468) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[1;31mE (508) wifi:failed to post WiFi event=43 ret=259[0m
+[0;32mI (508) wifi:mode : sta (28:37:2f:50:59:b0)[0m
+[0;32mI (508) wifi:enable tsf[0m
+[1;31mE (508) wifi:failed to post WiFi event=2 ret=259[0m
+[0;32mI (508) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (518) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;32mI (568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (568) main_task: Returned from app_main()[0m
+[0;32mI (1008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (1448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (1888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (2328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (2768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (3208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (3648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (5408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (5848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (6288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (6728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (7168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (7608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (9368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (9808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (10248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (10688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (11128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (11568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (12008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (12448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (12888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May 25 2026 17:30:29[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=15b44h ( 88900) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00025b6c vaddr=3fc94000 size=02e04h ( 11780) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00028978 vaddr=40380000 size=076a0h ( 30368) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7c390h (508816) map[0m
+[0;32mI (197) esp_image: segment 4: paddr=000ac3b8 vaddr=403876a0 size=0c870h ( 51312) load[0m
+[0;32mI (206) esp_image: segment 5: paddr=000b8c30 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (213) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (213) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Unicore app[0m
+[0;32mI (232) cpu_start: Pro cpu start user code[0m
+[0;32mI (232) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (232) app_init: Application information:[0m
+[0;32mI (232) app_init: Project name:     hud_adapter[0m
+[0;32mI (236) app_init: App version:      7a608ed-dirty[0m
+[0;32mI (241) app_init: Compile time:     May 25 2026 17:30:23[0m
+[0;32mI (246) app_init: ELF file SHA256:  5a2f2b700...[0m
+[0;32mI (250) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (255) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (259) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (263) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (267) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (273) heap_init: At 3FC9A780 len 00025880 (150 KiB): RAM[0m
+[0;32mI (278) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (284) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (290) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (315) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (321) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (388) pp: pp rom version: 9387209[0m
+[0;32mI (388) net80211: net80211 rom version: 9387209[0m
+[0;32mI (398) wifi:wifi driver task: 3fca1f6c, prio:23, stack:6656, core=0[0m
+[0;32mI (398) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (398) wifi:wifi certification version: v7.0[0m
+[0;32mI (398) wifi:config NVS flash: enabled[0m
+[0;32mI (408) wifi:config nano formatting: disabled[0m
+[0;32mI (408) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (408) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (418) wifi:Init management short buffer num: 32[0m
+[0;32mI (418) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (428) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (428) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (428) wifi:Init static rx buffer num: 10[0m
+[0;32mI (438) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (438) wifi_init: rx ba win: 6[0m
+[0;32mI (448) wifi_init: accept mbox: 6[0m
+[0;32mI (448) wifi_init: tcpip mbox: 32[0m
+[0;32mI (448) wifi_init: udp mbox: 6[0m
+[0;32mI (448) wifi_init: tcp mbox: 6[0m
+[0;32mI (458) wifi_init: tcp tx win: 5760[0m
+[0;32mI (458) wifi_init: tcp rx win: 5760[0m
+[0;32mI (458) wifi_init: tcp mss: 1440[0m
+[0;32mI (468) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (468) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (468) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[1;31mE (508) wifi:failed to post WiFi event=43 ret=259[0m
+[0;32mI (508) wifi:mode : sta (28:37:2f:50:59:b0)[0m
+[0;32mI (508) wifi:enable tsf[0m
+[1;31mE (508) wifi:failed to post WiFi event=2 ret=259[0m
+[0;32mI (508) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (518) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;32mI (568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (568) main_task: Returned from app_main()[0m
+[0;32mI (1008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (1448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (1888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (2328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (2768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (3208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (3648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (5408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (5848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (6288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (6728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (7168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (7608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (9368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (9808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (10248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (10688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (11128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (11568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (12008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (12448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (12888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (13328) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (13768) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (14208) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (14648) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (15088) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (15528) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (15968) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (16408) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (16848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (17288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (17728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (18168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (18608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (19048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (19488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (19928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (20368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (20808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (21248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (21688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (22128) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (22568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (23008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (23448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (23888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (24328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (24768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (25208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (25648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (26088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (26528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (26968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (27408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (27848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (28288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (28728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (29168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (29608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (30048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (30488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (30928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (31368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (31808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (32248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (32688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (33128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (33568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (34008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (34448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (34888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (35328) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (35768) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (36208) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (36648) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (37088) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (37528) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (37968) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (38408) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (38848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (39288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (39728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (40168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (40608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (41048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (41488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (41928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (42368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (42808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (43248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (43688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (44128) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (44568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (45008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (45448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (45888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (46328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (46768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (47208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (47648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (48088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (48528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (48968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (49408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (49848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (50288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (50728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (51168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (51608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (52048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (52488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (52928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (53368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (53808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (54248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (54688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (55128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (55568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (56008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (56448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (56888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (57328) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (57768) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (58208) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (58648) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (59088) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (59528) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (59968) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (60408) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (60848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (61288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (61728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (62168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (62608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (63048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (63488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (63928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (64368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (64808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (65248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (65688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (66128) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (66568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (67008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (67448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (67888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (68328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (68768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (69208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (69648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (70088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (70528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (70968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (71408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (71848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (72288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (72728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (73168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (73608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (74048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (74488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (74928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (75368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (75808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (76248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (76688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (77128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (77568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (78008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (78448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (78888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (79328) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (79768) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (80208) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (80648) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (81088) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (81528) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (81968) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (82408) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (82848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (83288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (83728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (84168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (84608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (85048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (85488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (85928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (86368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (86808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (87248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (87688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (88128) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (88568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (89008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (89448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (89888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (90328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (90768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (91208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (91648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (92088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (92528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (92968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (93408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (93848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (94288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (94728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (95168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (95608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (96048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (96488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (96928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (97368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (97808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (98248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (98688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (99128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (99568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (100008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (100448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (100888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (101328) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (101768) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (102208) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (102648) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (103088) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (103528) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (103968) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (104408) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (104848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (105288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (105728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (106168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (106608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (107048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (107488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (107928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (108368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (108808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (109248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (109688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (110128) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (110568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (111008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (111448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (111888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (112328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (112768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (113208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (113648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (114088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (114528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m

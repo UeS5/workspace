@@ -1,2 +1,2 @@
-source D:/Espressif/hud/hud_adapter/build/gdbinit/symbols
-source D:/Espressif/hud/hud_adapter/build/gdbinit/connect
+source /esp/workspace/hud_adapter/build/gdbinit/symbols
+source /esp/workspace/hud_adapter/build/gdbinit/connect

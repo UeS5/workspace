@@ -1,0 +1,179 @@
+Command: /home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python /esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /esp/workspace/hud_adapter/build/hud_adapter.elf /esp/workspace/hud_adapter/build/bootloader/bootloader.elf -m '/home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May 25 2026 17:30:29[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=15c4ch ( 89164) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00025c74 vaddr=3fc94000 size=02e04h ( 11780) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00028a80 vaddr=40380000 size=07598h ( 30104) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7ca5ch (510556) map[0m
+[0;32mI (197) esp_image: segment 4: paddr=000aca84 vaddr=40387598 size=0c978h ( 51576) load[0m
+[0;32mI (206) esp_image: segment 5: paddr=000b9404 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (213) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (213) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Unicore app[0m
+[0;32mI (232) cpu_start: Pro cpu start user code[0m
+[0;32mI (232) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (233) app_init: Application information:[0m
+[0;32mI (233) app_init: Project name:     hud_adapter[0m
+[0;32mI (237) app_init: App version:      7a608ed-dirty[0m
+[0;32mI (241) app_init: Compile time:     May 25 2026 17:30:23[0m
+[0;32mI (246) app_init: ELF file SHA256:  fd3d56995...[0m
+[0;32mI (251) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (255) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (259) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (263) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (267) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (273) heap_init: At 3FC9A780 len 00025880 (150 KiB): RAM[0m
+[0;32mI (279) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (285) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (291) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;33mW (303) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (315) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (321) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (388) pp: pp rom version: 9387209[0m
+[0;32mI (388) net80211: net80211 rom version: 9387209[0m
+[0;32mI (398) wifi:wifi driver task: 3fca1ff0, prio:23, stack:6656, core=0[0m
+[0;32mI (398) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (398) wifi:wifi certification version: v7.0[0m
+[0;32mI (398) wifi:config NVS flash: enabled[0m
+[0;32mI (398) wifi:config nano formatting: disabled[0m
+[0;32mI (408) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (408) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (418) wifi:Init management short buffer num: 32[0m
+[0;32mI (418) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (428) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (428) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (428) wifi:Init static rx buffer num: 10[0m
+[0;32mI (438) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (438) wifi_init: rx ba win: 6[0m
+[0;32mI (438) wifi_init: accept mbox: 6[0m
+[0;32mI (448) wifi_init: tcpip mbox: 32[0m
+[0;32mI (448) wifi_init: udp mbox: 6[0m
+[0;32mI (448) wifi_init: tcp mbox: 6[0m
+[0;32mI (458) wifi_init: tcp tx win: 5760[0m
+[0;32mI (458) wifi_init: tcp rx win: 5760[0m
+[0;32mI (458) wifi_init: tcp mss: 1440[0m
+[0;32mI (468) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (468) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (468) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[1;31mE (508) wifi:failed to post WiFi event=43 ret=259[0m
+[0;32mI (508) wifi:mode : sta (28:37:2f:50:59:b0)[0m
+[0;32mI (508) wifi:enable tsf[0m
+[1;31mE (508) wifi:failed to post WiFi event=2 ret=259[0m
+[0;32mI (508) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (518) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;32mI (568) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (568) main_task: Returned from app_main()[0m
+[0;32mI (1008) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (1448) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (1888) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (2328) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (2768) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (3208) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (3648) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (4088) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (4528) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (4968) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (5408) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (5848) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (6288) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (6728) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (7168) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (7608) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (8048) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (8488) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (8928) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (9368) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (9808) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (10248) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;33mW (10578) RECEIVE: >> Warning: No response from ECU for 10000 ms, going idle[0m
+[0;32mI (10578) ESPNOW: espnow [version: 2.0] deinit[0m
+[1;31mE (10598) wifi:failed to post WiFi event=3 ret=259[0m
+[0;32mI (10598) wifi:flush txq[0m
+[0;32mI (10598) wifi:stop sw txq[0m
+[0;32mI (10598) wifi:lmac stop hw txq[0m
+[0;32mI (10618) wifi:Deinit lldesc rx mblock:10[0m
+[0;32mI (10668) ESP-NOW: >> INFO: ESP-NOW stopped successfully[0m
+[0;32mI (10668) ESP-NOW: >> Info: ESP-NOW is now stopped[0m
+[0;32mI (10668) TWAI: >> INFO: TWAI node successfully disabled[0m
+[0;33mW (10668) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (10668) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (11678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 9000 milliseconds[0m
+[0;32mI (12678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8000 milliseconds[0m
+[0;32mI (13678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7000 milliseconds[0m
+[0;32mI (14678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6000 milliseconds[0m
+[0;32mI (15678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5000 milliseconds[0m
+[0;32mI (16678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4000 milliseconds[0m
+[0;32mI (17678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3000 milliseconds[0m
+[0;32mI (18678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2000 milliseconds[0m
+[0;32mI (19678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1000 milliseconds[0m
+[0;33mW (20678) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (20728) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (21168) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (21608) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (22048) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (22488) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (22928) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (23368) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (23808) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (24248) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (24688) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (25128) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (25568) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (25728) IDLE MODE: >> INFO: Disabled twai node[0m
+[0;33mW (25728) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (25728) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (26728) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 9001 milliseconds[0m
+[0;32mI (27728) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8001 milliseconds[0m
+[0;32mI (28728) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7001 milliseconds[0m
+[0;32mI (29728) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6001 milliseconds[0m
+[0;32mI (30728) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5001 milliseconds[0m
+[0;32mI (31728) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4001 milliseconds[0m
+[0;32mI (32728) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;32mI (33728) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2001 milliseconds[0m
+[0;32mI (34728) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1001 milliseconds[0m
+[0;32mI (35728) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1 milliseconds[0m
+[0;33mW (36728) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (36778) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (37218) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (37658) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (38098) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (38538) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (38978) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (39418) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (39858) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (40298) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (40738) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (41178) TWAI: >> Info: Engine load query has been sent: ESP_OK[0m
+[0;32mI (41618) TWAI: >> Info: Speed query has been sent: ESP_OK[0m
+[0;32mI (41778) IDLE MODE: >> INFO: Disabled twai node[0m
+[0;33mW (41778) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (41778) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (42778) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 9001 milliseconds[0m
+[0;32mI (43778) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8001 milliseconds[0m
+[0;32mI (44778) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7001 milliseconds[0m
+[0;32mI (45778) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6001 milliseconds[0m

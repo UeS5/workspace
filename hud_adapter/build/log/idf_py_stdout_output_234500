@@ -1,0 +1,712 @@
+Command: /home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python /esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /esp/workspace/hud_adapter/build/hud_adapter.elf /esp/workspace/hud_adapter/build/bootloader/bootloader.elf -m '/home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May 25 2026 17:30:29[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=15b44h ( 88900) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00025b6c vaddr=3fc94000 size=02e04h ( 11780) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00028978 vaddr=40380000 size=076a0h ( 30368) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7c394h (508820) map[0m
+[0;32mI (197) esp_image: segment 4: paddr=000ac3bc vaddr=403876a0 size=0c870h ( 51312) load[0m
+[0;32mI (206) esp_image: segment 5: paddr=000b8c34 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (213) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (213) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Unicore app[0m
+[0;32mI (232) cpu_start: Pro cpu start user code[0m
+[0;32mI (232) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (232) app_init: Application information:[0m
+[0;32mI (232) app_init: Project name:     hud_adapter[0m
+[0;32mI (236) app_init: App version:      7a608ed-dirty[0m
+[0;32mI (241) app_init: Compile time:     May 25 2026 17:30:23[0m
+[0;32mI (246) app_init: ELF file SHA256:  013b29dec...[0m
+[0;32mI (250) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (255) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (259) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (263) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (267) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (273) heap_init: At 3FC9A780 len 00025880 (150 KiB): RAM[0m
+[0;32mI (278) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (284) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (290) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (315) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (321) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (388) pp: pp rom version: 9387209[0m
+[0;32mI (388) net80211: net80211 rom version: 9387209[0m
+[0;32mI (398) wifi:wifi driver task: 3fca1ff0, prio:23, stack:6656, core=0[0m
+[0;32mI (398) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (398) wifi:wifi certification version: v7.0[0m
+[0;32mI (398) wifi:config NVS flash: enabled[0m
+[0;32mI (398) wifi:config nano formatting: disabled[0m
+[0;32mI (408) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (408) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (418) wifi:Init management short buffer num: 32[0m
+[0;32mI (418) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (428) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (428) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (428) wifi:Init static rx buffer num: 10[0m
+[0;32mI (438) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (438) wifi_init: rx ba win: 6[0m
+[0;32mI (438) wifi_init: accept mbox: 6[0m
+[0;32mI (448) wifi_init: tcpip mbox: 32[0m
+[0;32mI (448) wifi_init: udp mbox: 6[0m
+[0;32mI (448) wifi_init: tcp mbox: 6[0m
+[0;32mI (458) wifi_init: tcp tx win: 5760[0m
+[0;32mI (458) wifi_init: tcp rx win: 5760[0m
+[0;32mI (458) wifi_init: tcp mss: 1440[0m
+[0;32mI (468) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (468) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (468) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[1;31mE (508) wifi:failed to post WiFi event=43 ret=259[0m
+[0;32mI (508) wifi:mode : sta (28:37:2f:50:59:b0)[0m
+[0;32mI (508) wifi:enable tsf[0m
+[1;31mE (508) wifi:failed to post WiFi event=2 ret=259[0m
+[0;32mI (508) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (518) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;32mI (568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (568) main_task: Returned from app_main()[0m
+[0;32mI (1008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (1448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (1888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (2328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (2768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (3208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (3648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (4968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (5408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (5848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (6288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (6728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (7168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (7608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (8928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (9368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (9808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (10248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;33mW (10578) RECEIVE: >> Warning: No response from ECU for 10000 ms, going idle[0m
+[0;32mI (10578) ESPNOW: espnow [version: 2.0] deinit[0m
+[1;31mE (10598) wifi:failed to post WiFi event=3 ret=259[0m
+[0;32mI (10598) wifi:flush txq[0m
+[0;32mI (10598) wifi:stop sw txq[0m
+[0;32mI (10598) wifi:lmac stop hw txq[0m
+[0;32mI (10618) wifi:Deinit lldesc rx mblock:10[0m
+[0;32mI (10668) ESP-NOW: INFO: ESP-NOW stopped successfully[0m
+[0;32mI (10668) ESP-NOW: >> Info: ESP-NOW is now stopped[0m
+[0;32mI (10668) TWAI: >> INFO: TWAI node successfully disabled[0m
+[0;33mW (10668) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (10668) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (11678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8999 milliseconds[0m
+[0;32mI (12678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7999 milliseconds[0m
+[0;32mI (13678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6999 milliseconds[0m
+[0;32mI (14678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5999 milliseconds[0m
+[0;32mI (15678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4999 milliseconds[0m
+[0;32mI (16678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3999 milliseconds[0m
+[0;32mI (17678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2999 milliseconds[0m
+[0;32mI (18678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1999 milliseconds[0m
+[0;32mI (19678) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 999 milliseconds[0m
+[0;33mW (20678) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (20728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (21168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (21608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (22048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (22488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (22928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (23368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (23808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (24248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (24688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (25128) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (25568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (25748) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (25748) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (25748) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (25748) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (26758) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (27758) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (28758) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (29758) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (30758) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (31758) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (32758) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (33758) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (34758) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (35758) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (35808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (36248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (36688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (37128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (37568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (38008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (38448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (38888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (39328) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (39768) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (40208) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (40648) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (40828) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (40828) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (40828) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (40828) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (41838) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (42838) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (43838) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (44838) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (45838) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (46838) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (47838) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (48838) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (49838) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (50838) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (50888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (51328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (51768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (52208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (52648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (53088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (53528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (53968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (54408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (54848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (55288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (55728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (55908) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (55908) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (55908) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (55908) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (56918) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (57918) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (58918) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (59918) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (60918) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (61918) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (62918) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (63918) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (64918) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (65918) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (65968) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (66408) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (66848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (67288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (67728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (68168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (68608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (69048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (69488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (69928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (70368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (70808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (70988) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (70988) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (70988) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (70988) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (71998) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (72998) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (73998) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (74998) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (75998) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (76998) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (77998) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (78998) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (79998) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (80998) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (81048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (81488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (81928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (82368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (82808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (83248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (83688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (84128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (84568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (85008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (85448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (85888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (86068) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (86068) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (86068) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (86068) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (87078) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (88078) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (89078) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (90078) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (91078) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (92078) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (93078) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (94078) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (95078) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (96078) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (96128) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (96568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (97008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (97448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (97888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (98328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (98768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (99208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (99648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (100088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (100528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (100968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (101148) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (101148) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (101148) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (101148) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (102158) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (103158) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (104158) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (105158) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (106158) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (107158) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (108158) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (109158) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (110158) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (111158) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (111208) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (111648) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (112088) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (112528) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (112968) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (113408) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (113848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (114288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (114728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (115168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (115608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (116048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (116228) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (116228) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (116228) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (116228) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (117238) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (118238) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (119238) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (120238) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (121238) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (122238) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (123238) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (124238) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (125238) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (126238) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (126288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (126728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (127168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (127608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (128048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (128488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (128928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (129368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (129808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (130248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (130688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (131128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (131308) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (131308) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (131308) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (131308) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (132318) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (133318) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (134318) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (135318) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (136318) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (137318) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (138318) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (139318) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (140318) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (141318) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (141368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (141808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (142248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (142688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (143128) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (143568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (144008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (144448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (144888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (145328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (145768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (146208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (146388) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (146388) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (146388) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (146388) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (147398) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (148398) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (149398) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (150398) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (151398) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (152398) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (153398) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (154398) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (155398) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (156398) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (156448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (156888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (157328) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (157768) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (158208) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (158648) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (159088) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (159528) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (159968) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (160408) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (160848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (161288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (161468) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (161468) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (161468) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (161468) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (162478) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (163478) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (164478) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (165478) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (166478) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (167478) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (168478) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (169478) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (170478) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (171478) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (171528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (171968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (172408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (172848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (173288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (173728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (174168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (174608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (175048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (175488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (175928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (176368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (176548) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (176548) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (176548) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (176548) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (177558) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (178558) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (179558) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (180558) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (181558) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (182558) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (183558) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (184558) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (185558) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (186558) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (186608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (187048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (187488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (187928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (188368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (188808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (189248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (189688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (190128) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (190568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (191008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (191448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (191628) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (191628) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (191628) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (191628) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (192638) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (193638) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (194638) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (195638) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (196638) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (197638) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (198638) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (199638) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (200638) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (201638) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (201688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (202128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (202568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (203008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (203448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (203888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (204328) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (204768) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (205208) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (205648) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (206088) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (206528) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (206708) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (206708) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (206708) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (206708) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (207718) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (208718) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (209718) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (210718) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (211718) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (212718) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (213718) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (214718) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (215718) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (216718) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (216768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (217208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (217648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (218088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (218528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (218968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (219408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (219848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (220288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (220728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (221168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (221608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (221788) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (221788) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (221788) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (221788) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (222798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (223798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (224798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (225798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (226798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (227798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (228798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (229798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (230798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (231798) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (231848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (232288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (232728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (233168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (233608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (234048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (234488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (234928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (235368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (235808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (236248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (236688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (236868) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (236868) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (236868) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (236868) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (237878) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (238878) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (239878) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (240878) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (241878) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (242878) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (243878) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (244878) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (245878) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (246878) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (246928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (247368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (247808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (248248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (248688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (249128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (249568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (250008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (250448) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (250888) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (251328) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (251768) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (251948) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (251948) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (251948) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (251948) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (252958) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (253958) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (254958) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (255958) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (256958) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (257958) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (258958) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (259958) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (260958) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (261958) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (262008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (262448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (262888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (263328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (263768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (264208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (264648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (265088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (265528) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (265968) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (266408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (266848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (267028) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (267028) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (267028) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (267028) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (268038) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (269038) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (270038) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (271038) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (272038) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (273038) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (274038) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (275038) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (276038) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (277038) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (277088) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (277528) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (277968) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (278408) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (278848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (279288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (279728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (280168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (280608) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (281048) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (281488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (281928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (282108) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (282108) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (282108) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (282108) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (283118) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (284118) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (285118) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (286118) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (287118) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (288118) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (289118) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (290118) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (291118) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (292118) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (292168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (292608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (293048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (293488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (293928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (294368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (294808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (295248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (295688) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (296128) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (296568) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (297008) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (297188) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (297188) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (297188) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (297188) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (298198) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (299198) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (300198) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (301198) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (302198) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (303198) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (304198) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (305198) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (306198) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (307198) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (307248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (307688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (308128) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (308568) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (309008) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (309448) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (309888) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (310328) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (310768) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (311208) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (311648) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (312088) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (312268) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (312268) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (312268) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (312268) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (313278) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (314278) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (315278) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (316278) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (317278) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (318278) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (319278) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (320278) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (321278) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (322278) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (322328) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (322768) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (323208) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (323648) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (324088) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (324528) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (324968) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (325408) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (325848) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (326288) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (326728) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (327168) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (327348) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (327348) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (327348) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (327348) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (328358) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (329358) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (330358) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (331358) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (332358) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (333358) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (334358) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (335358) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (336358) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (337358) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (337408) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (337848) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (338288) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (338728) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (339168) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (339608) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (340048) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (340488) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (340928) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (341368) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (341808) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (342248) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[1;31mE (342428) ESP-NOW: ERROR: Failed to deinitialize ESP-NOW: ESP_OK[0m
+[0;33mW (342428) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;33mW (342428) IDLE MODE: INFO: Entering idle mode for 10 Seconds![0m
+[0;32mI (342428) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 10000 milliseconds[0m
+[0;32mI (343438) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8998 milliseconds[0m
+[0;32mI (344438) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 7998 milliseconds[0m
+[0;32mI (345438) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 6998 milliseconds[0m
+[0;32mI (346438) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5998 milliseconds[0m
+[0;32mI (347438) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4998 milliseconds[0m
+[0;32mI (348438) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3998 milliseconds[0m
+[0;32mI (349438) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2998 milliseconds[0m
+[0;32mI (350438) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1998 milliseconds[0m
+[0;32mI (351438) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 998 milliseconds[0m
+[0;33mW (352438) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (352488) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (352928) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (353368) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (353808) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
+[0;32mI (354248) TWAI: >> Info: Engine load query has been sent. Return value is: ESP_OK[0m
+[0;32mI (354688) TWAI: >> Info: Speed query has been sent. Return value is: ESP_OK[0m
