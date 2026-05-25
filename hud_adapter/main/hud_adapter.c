@@ -162,6 +162,8 @@ void pulse_led(gpio_num_t ledNr) {
     vTaskDelay(pdMS_TO_TICKS(20));
 }
 
+
+// chatgptden peeri burada eklemeye dair bir oneri geldi. mantikli yapilaiblir. 
 esp_err_t esp_now_start(void) {
 
 	esp_err_t ret = nvs_flash_init();  
