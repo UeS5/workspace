@@ -1,0 +1,316 @@
+Command: /home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python /esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /esp/workspace/obd_test/build/obd_test.elf /esp/workspace/obd_test/build/bootloader/bootloader.elf -m '/home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May 25 2026 14:49:26[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0a204h ( 41476) map[0m
+[0;32mI (97) esp_image: segment 1: paddr=0001a22c vaddr=3fc8c000 size=01420h (  5152) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001b654 vaddr=40380000 size=049c4h ( 18884) load[0m
+[0;32mI (108) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1a248h (107080) map[0m
+[0;32mI (129) esp_image: segment 4: paddr=0003a270 vaddr=403849c4 size=07570h ( 30064) load[0m
+[0;32mI (135) esp_image: segment 5: paddr=000417e8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (139) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (139) boot: Disabling RNG early entropy source...[0m
+[0;32mI (154) cpu_start: Unicore app[0m
+[0;32mI (163) cpu_start: Pro cpu start user code[0m
+[0;32mI (163) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (163) app_init: Application information:[0m
+[0;32mI (163) app_init: Project name:     obd_test[0m
+[0;32mI (167) app_init: App version:      a968516-dirty[0m
+[0;32mI (171) app_init: Compile time:     May 25 2026 14:49:21[0m
+[0;32mI (176) app_init: ELF file SHA256:  78a025906...[0m
+[0;32mI (181) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (186) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (189) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (193) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (197) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (204) heap_init: At 3FC8E2F0 len 00031D10 (199 KiB): RAM[0m
+[0;32mI (209) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (215) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (221) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (227) spi_flash: detected chip: generic[0m
+[0;32mI (230) spi_flash: flash io: dio[0m
+[0;33mW (233) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (245) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (251) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (258) main_task: Started on CPU0[0m
+[0;32mI (268) main_task: Calling app_main()[0m
+[0;32mI (268) TWAI: >> Info: TWAI queue created successfully![0m
+[0;32mI (768) TWAI: >> Info: TWAI node initialized and enabled successfully![0m
+[0;32mI (1268) main_task: Returned from app_main()[0m
+[0;32mI (1268) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (1308) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (1668) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (1708) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (1748) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (2108) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (2148) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (2188) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (2548) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (2588) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (2628) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (2988) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (3028) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (3068) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (3428) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (3468) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (3508) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (3868) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (3908) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (3948) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (4308) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (4348) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (4388) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (4748) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (4788) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (4828) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (5188) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (5228) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (5268) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (5628) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (5668) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (5708) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (6068) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (6108) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (6148) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (6508) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (6548) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (6588) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (6948) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (6988) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (7028) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (7388) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (7428) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (7468) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (7828) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (7868) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (7908) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (8268) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (8308) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (8348) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (8708) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (8748) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (8788) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (9148) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (9188) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (9228) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (9588) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (9628) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (9668) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (10028) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (10068) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (10108) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (10468) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (10508) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (10548) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (10908) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (10948) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (10988) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (11348) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (11388) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (11428) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (11788) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (11828) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (11868) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (12228) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (12278) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (12318) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (12668) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (12708) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (12748) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (13108) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (13148) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (13188) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (13548) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (13588) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (13628) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (13988) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (14028) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (14068) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (14428) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (14468) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (14508) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (14868) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (14908) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (14948) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (15308) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (15348) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (15388) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (15748) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (15788) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (15828) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (16188) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (16228) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (16268) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (16628) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (16668) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (16708) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (17068) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (17108) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (17148) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (17508) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (17548) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (17588) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (17948) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (17988) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (18028) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (18388) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (18428) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (18468) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (18828) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (18868) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (18908) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (19268) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (19308) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (19348) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (19708) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (19748) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (19788) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (20148) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (20188) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (20228) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (20588) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (20628) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (20668) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (21028) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (21068) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (21108) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (21468) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (21508) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (21548) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (21908) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (21948) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (21988) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (22348) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (22388) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (22428) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (22788) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (22828) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (22868) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (23228) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (23268) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (23308) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (23668) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (23708) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (23748) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (24108) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (24148) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (24188) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (24548) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (24588) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (24628) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (24988) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (25028) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (25068) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (25428) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (25468) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (25508) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (25868) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (25908) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (25948) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (26308) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (26348) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (26388) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (26748) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (26788) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (26828) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (27188) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (27228) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (27268) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (27628) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (27668) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (27708) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (28068) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (28108) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (28148) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (28508) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (28548) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (28588) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (28948) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (28988) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (29028) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (29388) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (29428) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (29468) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (29828) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (29868) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (29908) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (30268) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (30308) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (30348) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (30708) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (30748) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (30788) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (31148) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (31188) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (31228) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (31588) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (31628) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (31668) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (32028) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (32068) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (32108) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (32468) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (32508) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (32548) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (32908) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (32948) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (32988) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (33348) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (33388) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (33428) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (33788) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (33828) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (33868) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (34228) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (34268) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (34308) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (34668) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (34708) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (34748) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (35108) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (35148) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (35188) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (35548) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (35588) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (35628) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (35988) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (36028) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (36068) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (36428) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (36468) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (36508) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (36868) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (36908) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (36948) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (37308) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (37348) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (37388) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (37748) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (37788) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (37828) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (38188) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (38228) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m
+[0;32mI (38268) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (38628) TWAI: >> Info: Speed query has been sent. Return value: ESP_OK[0m
+[0;32mI (38668) TWAI: >> Info: Received TWAI message with ID: 0x7E8, Data: 03 41 0D 00 00 00 00 00[0m
+[0;32mI (38708) TWAI: >> Info: Received TWAI message with ID: 0x7E9, Data: 03 41 0D 00 00 01 4D 44[0m

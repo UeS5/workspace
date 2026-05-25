@@ -41,8 +41,8 @@ twai_onchip_node_config_t node_config = {
 
 // 0x7E* filter
 twai_mask_filter_config_t mask_cfg = {
-	.id = 0x000,
-	.mask = 0x000,
+	.id = 0x7E8,
+	.mask = 0x7E0,
 	.is_ext = false, 
 }; 
 
