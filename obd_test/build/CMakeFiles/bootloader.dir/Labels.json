@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/esp/workspace/obd_test/build/CMakeFiles/bootloader"
+			"file" : "D:/Espressif/hud/obd_test/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/esp/workspace/obd_test/build/CMakeFiles/bootloader.rule"
+			"file" : "D:/Espressif/hud/obd_test/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/esp/workspace/obd_test/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "D:/Espressif/hud/obd_test/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/esp/workspace/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "D:/Espressif/hud/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/esp/workspace/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "D:/Espressif/hud/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/esp/workspace/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "D:/Espressif/hud/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/esp/workspace/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "D:/Espressif/hud/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/esp/workspace/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "D:/Espressif/hud/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/esp/workspace/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "D:/Espressif/hud/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/esp/workspace/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "D:/Espressif/hud/obd_test/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

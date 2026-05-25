@@ -1,5 +1,2 @@
--Wno-frame-address
--mlongcalls
--fno-builtin-memcpy
--fno-builtin-memset
--fno-builtin-bzero
+-march=rv32imc_zicsr_zifencei
+-mtune=esp-base

@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/bin/xtensa-esp32-elf-g++.exe")
+set(CMAKE_CXX_COMPILER "D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-g++.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "15.2.0")
@@ -22,15 +22,15 @@ set(CMAKE_CXX_COMPILER_FRONTEND_VARIANT "GNU")
 set(CMAKE_CXX_COMPILER_APPLE_SYSROOT "")
 set(CMAKE_CXX_SIMULATE_VERSION "")
 
-set(CMAKE_CXX_COMPILER_SYSROOT "D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/bin/../xtensa-esp-elf/usr")
-set(CMAKE_COMPILER_SYSROOT "D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/bin/../xtensa-esp-elf/usr")
+set(CMAKE_CXX_COMPILER_SYSROOT "D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr")
+set(CMAKE_COMPILER_SYSROOT "D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/../riscv32-esp-elf/usr")
 
 
-set(CMAKE_AR "D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/bin/xtensa-esp32-elf-ar.exe")
-set(CMAKE_CXX_COMPILER_AR "D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ar.exe")
-set(CMAKE_RANLIB "D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/bin/xtensa-esp32-elf-ranlib.exe")
-set(CMAKE_CXX_COMPILER_RANLIB "D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc-ranlib.exe")
-set(CMAKE_LINKER "D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/bin/xtensa-esp32-elf-ld.exe")
+set(CMAKE_AR "D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-ar.exe")
+set(CMAKE_CXX_COMPILER_AR "D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ar.exe")
+set(CMAKE_RANLIB "D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-ranlib.exe")
+set(CMAKE_CXX_COMPILER_RANLIB "D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-gcc-ranlib.exe")
+set(CMAKE_LINKER "D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/bin/riscv32-esp-elf-ld.exe")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
 set(CMAKE_CXX_COMPILER_LINKER "NOTFOUND")
@@ -91,9 +91,9 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.2.0;D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.2.0/xtensa-esp-elf/esp32;D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.2.0/backward;D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include;D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/include-fixed;D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0;D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/riscv32-esp-elf;D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include/c++/15.2.0/backward;D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/15.2.0/include;D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/15.2.0/include-fixed;D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "gcc;c;nosys;c;gcc")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0/esp32;D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/lib/esp32;D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/lib/gcc/xtensa-esp-elf/15.2.0;D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/lib/gcc;D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/lib;D:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20250929/xtensa-esp-elf/xtensa-esp-elf/usr/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/15.2.0;D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/lib/gcc;D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/lib;D:/Espressif/tools/riscv32-esp-elf/esp-15.2.0_20250929/riscv32-esp-elf/riscv32-esp-elf/usr/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
 set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "")
 

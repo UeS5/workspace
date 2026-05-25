@@ -1,2 +1,2 @@
-source /esp/workspace/obd_test/build/gdbinit/symbols
-source /esp/workspace/obd_test/build/gdbinit/connect
+source D:/Espressif/hud/obd_test/build/gdbinit/symbols
+source D:/Espressif/hud/obd_test/build/gdbinit/connect

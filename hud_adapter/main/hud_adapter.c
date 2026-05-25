@@ -19,6 +19,7 @@
 #include <nvs_flash.h>
 #include <esp_log.h>
 #include <esp_sleep.h>
+#include <driver/gpio.h>
 
 #define BUS_STATUS_FLAG             (1 << 0)
 
@@ -38,6 +39,10 @@
 #define TIMEOUT_IN_MS 10000
 #define COOLDOWN_TIME_MS 3000
 #define TWAI_CHECK_TIME_MS 5000
+
+#define RED_LED GPIO_NUM_4
+#define BLUE_LED GPIO_NUM_5
+#define GREEN_LED GPIO_NUM_7
 
 #define QUERY_INTERVAL 400 
 
@@ -75,8 +80,8 @@ static const char *TAG_MAIN 			= "MAIN";
 twai_node_handle_t node_hdl = NULL;
 
 twai_onchip_node_config_t node_config = {
-	.io_cfg.tx = 20,
-	.io_cfg.rx = 21,
+	.io_cfg.tx = 19,
+	.io_cfg.rx = 18,
 	.bit_timing.bitrate = 500000,
 	.tx_queue_depth = 5,
 };
@@ -91,21 +96,34 @@ uint8_t twai_speed_query[8] = SPEED_QUERY; // Speed query
 uint8_t twai_engineLoad_query[8] = ENGINELOAD_QUERY; // Engine load query
 									      
 twai_frame_t speed_query = {
-	.header.id = 0x7E8, 
+	.header.id = 0x7DF, 
 	.header.ide = false,
 	.buffer = twai_speed_query,
     .buffer_len = sizeof(twai_speed_query), 
 };	
 
 twai_frame_t engine_load_query = {
-	.header.id = 0x7E8, 
+	.header.id = 0x7DF, 
 	.header.ide = false, 
 	.buffer = twai_engineLoad_query,
 	.buffer_len = sizeof(twai_engineLoad_query),
 };
 
-// YAPILACAKLAR: 
-// burada gelen sinyalin validatelenmesi lazim
+void config_gpio(void) {
+    gpio_config_t io_conf = {
+        .mode = GPIO_MODE_OUTPUT,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE,
+        .pin_bit_mask =
+              (1ULL << RED_LED) |
+              (1ULL << BLUE_LED) |
+              (1ULL << GREEN_LED)
+    };
+
+    gpio_config(&io_conf);
+}
+
 static bool twai_rx_cb(twai_node_handle_t handle, const twai_rx_done_event_data_t *edata, void *user_ctx) {
 	uint8_t recv_buff[8];
 	rx_queue_msg_t msg;
@@ -120,7 +138,7 @@ static bool twai_rx_cb(twai_node_handle_t handle, const twai_rx_done_event_data_
 	if (twai_node_receive_from_isr(handle, &rx_frame) == ESP_OK) {
 		msg.id = rx_frame.header.id;
 		memcpy(msg.data, recv_buff, rx_frame.buffer_len);
-		xQueueOverwriteFromISR(queue_twai, &msg, &xHigherPriorityTaskWoken);		
+		xQueueSendFromISR(queue_twai, &msg, &xHigherPriorityTaskWoken);		
 	}
 
 	return (xHigherPriorityTaskWoken == pdTRUE); 
@@ -133,6 +151,16 @@ twai_event_callbacks_t user_cbs = {
 void esp_now_recv_cb(const esp_now_recv_info_t *esp_now_info, const uint8_t *data, int len) {
 // data gelmeyecek
 } 
+
+void pulse_led(gpio_num_t ledNr) {
+    gpio_set_level(ledNr, 1);
+
+    vTaskDelay(pdMS_TO_TICKS(20));
+
+    gpio_set_level(ledNr, 0);
+
+    vTaskDelay(pdMS_TO_TICKS(20));
+}
 
 esp_err_t esp_now_start(void) {
 
@@ -200,16 +228,17 @@ esp_err_t esp_now_stop(void) {
 void vTask_receive_twai(void *pvParameters) { 
 
     rx_queue_msg_t msg;
-    uint8_t counter = 0;
+	bool speed_received = false;
+	bool engLoad_received = false;
     esp_now_data_buffer_t pkt_buffer = {0};
     int64_t last_valid_packet_time = esp_timer_get_time();  
 
     for (;;) {
 
         xEventGroupWaitBits(TASK_REG, TASK_RECEIVE_TWAI_FLAG, pdFALSE, pdFALSE, portMAX_DELAY);
-        last_valid_packet_time = esp_timer_get_time();
 
         while (xEventGroupGetBits(TASK_REG) & TASK_RECEIVE_TWAI_FLAG) {
+			last_valid_packet_time = esp_timer_get_time();
 
             if (xQueueReceive(queue_twai, &msg, pdMS_TO_TICKS(10)) == pdPASS) {
                 
@@ -219,22 +248,27 @@ void vTask_receive_twai(void *pvParameters) {
                 
                 last_valid_packet_time = esp_timer_get_time();
 
-                if (msg.data[2] == TWAI_SPEED_TAG) {
+                if (msg.data[2] == TWAI_SPEED_TAG && !speed_received) {
                     pkt_buffer.speed = msg.data[3];
-                    counter++;
-                } else if (msg.data[2] == TWAI_ENGINELOAD_TAG) {
+                    speed_received = true;
+                } else if (msg.data[2] == TWAI_ENGINELOAD_TAG && !engLoad_received) {
                     pkt_buffer.engineLoad = msg.data[3];
-                    counter++;
+                    engLoad_received = true;
                 } 
 
-                if (counter >= 2) {
+                if (speed_received && engLoad_received) {
                     xQueueOverwrite(queue_esp_now, &pkt_buffer);
-                    counter = 0;
+
 					xEventGroupSetBits(STATUS_REG, BUS_STATUS_FLAG);
+					pulse_led(BLUE_LED);
+
+					speed_received = false;
+                    engLoad_received = false;
                 }
             }
 
             int64_t current_time = esp_timer_get_time();
+
             if ((current_time - last_valid_packet_time) / 1000 > TIMEOUT_IN_MS) {
 
                 ESP_LOGW(TAG_RECEIVE, ">> Warning: No response from ECU for %d ms, going idle", TIMEOUT_IN_MS);
@@ -262,7 +296,8 @@ void vTask_receive_twai(void *pvParameters) {
 					ESP_LOGE(TAG_TWAI, ">> INFO: TWAI node could not be disabled. Error: %s", esp_err_to_name(twai_disable_err));
 				}
 
-                counter = 0;
+				speed_received = false;
+                engLoad_received = false;
                 memset(&pkt_buffer, 0, sizeof(pkt_buffer));
 
             }
@@ -272,7 +307,7 @@ void vTask_receive_twai(void *pvParameters) {
     }
 }
 
-// degismeli olarak speed ve engine load querysi atiyor. (EN SON HATA BURADAYDI. Node bus is off hatasi )
+// degismeli olarak speed ve engine load querysi atiyor
 void vTask_send_query(void *pvParameters) {
 	bool query_type = false;
 
@@ -284,16 +319,17 @@ void vTask_send_query(void *pvParameters) {
 			
 			if (query_type == false) {
 				esp_err_t err = twai_node_transmit(node_hdl, &speed_query, 0); 
-				query_type = !query_type;
-				vTaskDelay(pdMS_TO_TICKS(QUERY_INTERVAL));
+				query_type = !query_type;		
 				ESP_LOGI(TAG_TWAI, ">> Info: Speed query has been sent. Return value is: %s", esp_err_to_name(err));
 			} else {
 				esp_err_t err = twai_node_transmit(node_hdl, &engine_load_query, 0);
 				query_type = !query_type;
-				vTaskDelay(pdMS_TO_TICKS(QUERY_INTERVAL));
 				ESP_LOGI(TAG_TWAI, ">> Info: Engine load query has been sent. Return value is: %s", esp_err_to_name(err)); 
 			}	
-		
+			
+			vTaskDelay(pdMS_TO_TICKS(QUERY_INTERVAL));
+
+			pulse_led(RED_LED);
 		}
 
 		vTaskDelay(pdMS_TO_TICKS(QUERY_INTERVAL));
@@ -312,7 +348,7 @@ void vTask_esp_now_send_data(void *args) {
 	peer.ifidx = WIFI_IF_STA;
     peer.channel = 0;
 	peer.encrypt = false;
-	(void)esp_now_add_peer(&peer);	
+		
 		
 	for (;;) {
 
@@ -320,13 +356,16 @@ void vTask_esp_now_send_data(void *args) {
 
 		while (xEventGroupGetBits(TASK_REG) & TASK_ESP_NOW_SEND_DATA_FLAG) {
 
-			if (xQueueReceive(queue_esp_now, &pkt_buffer, portMAX_DELAY) == pdPASS) {
+			if (!esp_now_is_peer_exist(broadcast_addr)) (void)esp_now_add_peer(&peer);
+
+			if (xQueueReceive(queue_esp_now, &pkt_buffer, pdMS_TO_TICKS(100)) == pdPASS) {
 
 				pkt.tag = BROADCAST_PASS;
 				pkt.speed_data = pkt_buffer.speed;
 				pkt.engLoad_data = pkt_buffer.engineLoad;
 
 				esp_err_t err = esp_now_send(peer.peer_addr, (uint8_t *)&pkt, sizeof(pkt)); 
+				pulse_led(GREEN_LED);
 
 				if (err == ESP_OK) {
 					ESP_LOGI(TAG_ESP_NOW, ">> Info: ESP-NOW packet sent successfully! Speed: %d, Engine Load: %d", pkt.speed_data, pkt.engLoad_data);
@@ -379,7 +418,15 @@ void vTask_idle_mode(void *pvParameters) {
                 xEventGroupClearBits(TASK_REG, TASK_IDLE_MODE_FLAG);
 				xEventGroupSetBits(TASK_REG, TASK_ESP_NOW_SEND_DATA_FLAG);
 
-				ESP_LOGI(TAG_IDLE_MODE, ">> Warning: Valid signal detected, exiting idle mode."); 
+				ESP_LOGI(TAG_IDLE_MODE, ">> Warning: Valid signal detected, exiting idle mode.");
+
+				esp_err_t err = esp_now_start();
+				if (err == ESP_OK) {
+					ESP_LOGI(TAG_IDLE_MODE, ">> Info: ESP-NOW restarted successfully!");
+				} else {
+					ESP_LOGE(TAG_IDLE_MODE, ">> Error: Failed to restart ESP-NOW inside idle mode: %s", esp_err_to_name(err));
+				}
+
                 vTaskDelay(pdMS_TO_TICKS(100));  
 
                 break;
@@ -405,7 +452,7 @@ void app_main(void) {
 	TASK_REG = xEventGroupCreate();
 	STATUS_REG = xEventGroupCreate();
 
-	queue_twai = xQueueCreate(1, sizeof(rx_queue_msg_t));
+	queue_twai = xQueueCreate(5, sizeof(rx_queue_msg_t));
 	queue_esp_now = xQueueCreate(1, sizeof(esp_now_data_buffer_t));
 	
 	ESP_ERROR_CHECK(twai_new_node_onchip(&node_config, &node_hdl));
@@ -423,9 +470,9 @@ void app_main(void) {
 
 	vTaskDelay(pdMS_TO_TICKS(50));
 
-	xTaskCreate(vTask_send_query, "TWAI Send Query", 2048, NULL, 1, NULL);
+	xTaskCreate(vTask_send_query, "TWAI Send Query", 3072, NULL, 1, NULL);
 	xTaskCreate(vTask_esp_now_send_data, "ESPNOW Send Data", 4096, NULL, 3, NULL);
-	xTaskCreate(vTask_idle_mode, "Idle Mode", 3072, NULL, 2, NULL);
+	xTaskCreate(vTask_idle_mode, "Idle Mode", 4096, NULL, 2, NULL);
 	
 	xEventGroupSetBits(TASK_REG, TASK_RECEIVE_TWAI_FLAG);
 	xEventGroupSetBits(TASK_REG, TASK_SEND_QUERY_FLAG);

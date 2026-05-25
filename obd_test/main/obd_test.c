@@ -53,6 +53,13 @@ twai_frame_t speed_query = {
     .buffer_len = sizeof(twai_speed_query), 
 };	
 
+twai_frame_t engine_load_query = {
+	.header.id = 0x7DF, 
+	.header.ide = false, 
+	.buffer = twai_engineLoad_query,
+	.buffer_len = sizeof(twai_engineLoad_query),
+};
+
 void config_gpio(void) {
     gpio_config_t io_conf = {
         .mode = GPIO_MODE_OUTPUT,
@@ -118,16 +125,23 @@ void vTask_print_received_data(void *pvParameters) {
 }
 
 void vTask_send_query(void *pvParameters) {
+    bool query_type = false;
 
     while (true) {
-        
-        esp_err_t err = twai_node_transmit(node_hdl, &speed_query, 0); 
-        vTaskDelay(pdMS_TO_TICKS(400));
-        ESP_LOGI(TAG_TWAI, ">> Info: Speed query has been sent. Return value: %s", esp_err_to_name(err));
-        pulse_led(RED_LED);
-        
-    }
 
+        if (query_type == false) {
+            esp_err_t err = twai_node_transmit(node_hdl, &speed_query, 0); 
+            query_type = !query_type;
+            ESP_LOGI(TAG_TWAI, ">> Info: Speed query has been sent. Return value is: %s", esp_err_to_name(err));
+        } else {
+            esp_err_t err = twai_node_transmit(node_hdl, &engine_load_query, 0);
+            query_type = !query_type;
+            ESP_LOGI(TAG_TWAI, ">> Info: Engine load query has been sent. Return value is: %s", esp_err_to_name(err)); 
+        }
+            
+        pulse_led(RED_LED);
+        vTaskDelay(pdMS_TO_TICKS(400));   
+    }
 } 
     
 void app_main(void){
