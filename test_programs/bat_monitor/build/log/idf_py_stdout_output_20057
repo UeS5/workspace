@@ -1,0 +1,268 @@
+Command: /home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python /esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /esp/workspace/test_programs/bat_monitor/build/bat_monitor.elf /esp/workspace/test_programs/bat_monitor/build/bootloader/bootloader.elf -m '/home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jul 11 2026 23:32:46[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09c10h ( 39952) map[0m
+[0;32mI (96) esp_image: segment 1: paddr=00019c38 vaddr=3fc8be00 size=013ech (  5100) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001b02c vaddr=40380000 size=04fech ( 20460) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=18c08h (101384) map[0m
+[0;32mI (128) esp_image: segment 4: paddr=00038c30 vaddr=40384fec size=06c84h ( 27780) load[0m
+[0;32mI (134) esp_image: segment 5: paddr=0003f8bc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (138) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (138) boot: Disabling RNG early entropy source...[0m
+[0;32mI (153) cpu_start: Unicore app[0m
+[0;32mI (162) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (162) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     bat_monitor[0m
+[0;32mI (166) app_init: App version:      d1462a8[0m
+[0;32mI (170) app_init: Compile time:     Jul 11 2026 23:32:41[0m
+[0;32mI (175) app_init: ELF file SHA256:  4879cd907...[0m
+[0;32mI (179) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (184) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (188) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (192) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (196) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (202) heap_init: At 3FC8E100 len 00031F00 (199 KiB): RAM[0m
+[0;32mI (207) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (214) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (220) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (226) spi_flash: detected chip: generic[0m
+[0;32mI (229) spi_flash: flash io: dio[0m
+[0;33mW (231) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (244) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (250) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (257) main_task: Started on CPU0[0m
+[0;32mI (267) main_task: Calling app_main()[0m
+[0;32mI (267) BAT: Kalibrasyon: curve fitting aktif[0m
+[0;32mI (267) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (1277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (2277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (3277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (4277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (5277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (6277) BAT: raw=2428 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (7277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (8277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (9277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (10277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (11277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (12277) BAT: raw=2425 | adc=1871 mV | batarya=3274 mV (3.27 V)[0m
+[0;32mI (13277) BAT: raw=2429 | adc=1874 mV | batarya=3280 mV (3.28 V)[0m
+[0;32mI (14277) BAT: raw=2442 | adc=1884 mV | batarya=3297 mV (3.30 V)[0m
+[0;32mI (15277) BAT: raw=2458 | adc=1895 mV | batarya=3316 mV (3.32 V)[0m
+[0;32mI (16277) BAT: raw=2475 | adc=1908 mV | batarya=3339 mV (3.34 V)[0m
+[0;32mI (17277) BAT: raw=2526 | adc=1947 mV | batarya=3407 mV (3.41 V)[0m
+[0;32mI (18277) BAT: raw=2605 | adc=2006 mV | batarya=3510 mV (3.51 V)[0m
+[0;32mI (19277) BAT: raw=2654 | adc=2043 mV | batarya=3575 mV (3.58 V)[0m
+[0;32mI (20277) BAT: raw=2735 | adc=2102 mV | batarya=3678 mV (3.68 V)[0m
+[0;32mI (21277) BAT: raw=2829 | adc=2172 mV | batarya=3801 mV (3.80 V)[0m
+[0;32mI (22277) BAT: raw=2927 | adc=2245 mV | batarya=3929 mV (3.93 V)[0m
+[0;32mI (23277) BAT: raw=2990 | adc=2291 mV | batarya=4009 mV (4.01 V)[0m
+[0;32mI (24277) BAT: raw=3021 | adc=2313 mV | batarya=4048 mV (4.05 V)[0m
+[0;32mI (25277) BAT: raw=3063 | adc=2343 mV | batarya=4100 mV (4.10 V)[0m
+[0;32mI (26277) BAT: raw=3088 | adc=2362 mV | batarya=4134 mV (4.13 V)[0m
+[0;32mI (27277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (28277) BAT: raw=3102 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (29277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (30277) BAT: raw=3099 | adc=2370 mV | batarya=4148 mV (4.15 V)[0m
+[0;32mI (31277) BAT: raw=3102 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (32277) BAT: raw=3099 | adc=2370 mV | batarya=4148 mV (4.15 V)[0m
+[0;32mI (33277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (34277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (35277) BAT: raw=3102 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (36277) BAT: raw=3100 | adc=2370 mV | batarya=4148 mV (4.15 V)[0m
+[0;32mI (37277) BAT: raw=3102 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (38277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (39277) BAT: raw=3100 | adc=2370 mV | batarya=4148 mV (4.15 V)[0m
+[0;32mI (40277) BAT: raw=3103 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (41277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (42277) BAT: raw=3102 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (43277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (44277) BAT: raw=3102 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (45277) BAT: raw=3103 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (46277) BAT: raw=3102 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (47277) BAT: raw=3102 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (48277) BAT: raw=3100 | adc=2370 mV | batarya=4148 mV (4.15 V)[0m
+[0;32mI (49277) BAT: raw=3103 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (50277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (51277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (52277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (53277) BAT: raw=3100 | adc=2370 mV | batarya=4148 mV (4.15 V)[0m
+[0;32mI (54277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (55277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (56277) BAT: raw=3102 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (57277) BAT: raw=3099 | adc=2370 mV | batarya=4148 mV (4.15 V)[0m
+[0;32mI (58277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+E BESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jul 11 2026 23:32:46[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=09c10h ( 39952) map[0m
+[0;32mI (96) esp_image: segment 1: paddr=00019c38 vaddr=3fc8be00 size=013ech (  5100) load[0m
+[0;32mI (98) esp_image: segment 2: paddr=0001b02c vaddr=40380000 size=04fech ( 20460) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=18c08h (101384) map[0m
+[0;32mI (128) esp_image: segment 4: paddr=00038c30 vaddr=40384fec size=06c84h ( 27780) load[0m
+[0;32mI (134) esp_image: segment 5: paddr=0003f8bc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (138) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (138) boot: Disabling RNG early entropy source...[0m
+[0;32mI (153) cpu_start: Unicore app[0m
+[0;32mI (162) cpu_start: Pro cpu start user code[0m
+[0;32mI (162) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (162) app_init: Application information:[0m
+[0;32mI (162) app_init: Project name:     bat_monitor[0m
+[0;32mI (166) app_init: App version:      d1462a8[0m
+[0;32mI (170) app_init: Compile time:     Jul 11 2026 23:32:41[0m
+[0;32mI (175) app_init: ELF file SHA256:  4879cd907...[0m
+[0;32mI (179) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (184) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (188) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (192) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (196) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (202) heap_init: At 3FC8E100 len 00031F00 (199 KiB): RAM[0m
+[0;32mI (207) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (214) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (220) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (226) spi_flash: detected chip: generic[0m
+[0;32mI (229) spi_flash: flash io: dio[0m
+[0;33mW (231) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (244) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (250) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (257) main_task: Started on CPU0[0m
+[0;32mI (267) main_task: Calling app_main()[0m
+[0;32mI (267) BAT: Kalibrasyon: curve fitting aktif[0m
+[0;32mI (267) BAT: raw=2416 | adc=1864 mV | batarya=3262 mV (3.26 V)[0m
+[0;32mI (1277) BAT: raw=2425 | adc=1871 mV | batarya=3274 mV (3.27 V)[0m
+[0;32mI (2277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (3277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (4277) BAT: raw=2428 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (5277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (6277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (7277) BAT: raw=2428 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (8277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (9277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (10277) BAT: raw=2445 | adc=1886 mV | batarya=3300 mV (3.30 V)[0m
+[0;32mI (11277) BAT: raw=2521 | adc=1942 mV | batarya=3398 mV (3.40 V)[0m
+[0;32mI (12277) BAT: raw=2544 | adc=1961 mV | batarya=3432 mV (3.43 V)[0m
+[0;32mI (13277) BAT: raw=2573 | adc=1982 mV | batarya=3468 mV (3.47 V)[0m
+[0;32mI (14277) BAT: raw=2637 | adc=2030 mV | batarya=3552 mV (3.55 V)[0m
+[0;32mI (15277) BAT: raw=2731 | adc=2100 mV | batarya=3675 mV (3.67 V)[0m
+[0;32mI (16277) BAT: raw=2800 | adc=2150 mV | batarya=3762 mV (3.76 V)[0m
+[0;32mI (17277) BAT: raw=2874 | adc=2205 mV | batarya=3859 mV (3.86 V)[0m
+[0;32mI (18277) BAT: raw=2956 | adc=2265 mV | batarya=3964 mV (3.96 V)[0m
+[0;32mI (19277) BAT: raw=2991 | adc=2291 mV | batarya=4009 mV (4.01 V)[0m
+[0;32mI (20277) BAT: raw=3031 | adc=2320 mV | batarya=4060 mV (4.06 V)[0m
+[0;32mI (21277) BAT: raw=3086 | adc=2359 mV | batarya=4128 mV (4.13 V)[0m
+[0;32mI (22277) BAT: raw=3102 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (23277) BAT: raw=3103 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (24277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (25277) BAT: raw=3102 | adc=2372 mV | batarya=4151 mV (4.15 V)[0m
+[0;32mI (26277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (27277) BAT: raw=3100 | adc=2370 mV | batarya=4148 mV (4.15 V)[0m
+[0;32mI (28277) BAT: raw=3100 | adc=2370 mV | batarya=4148 mV (4.15 V)[0m
+[0;32mI (29277) BAT: raw=3100 | adc=2370 mV | batarya=4148 mV (4.15 V)[0m
+[0;32mI (30277) BAT: raw=3101 | adc=2371 mV | batarya=4149 mV (4.15 V)[0m
+[0;32mI (31277) BAT: raw=3083 | adc=2358 mV | batarya=4126 mV (4.13 V)[0m
+[0;32mI (32277) BAT: raw=3032 | adc=2320 mV | batarya=4060 mV (4.06 V)[0m
+[0;32mI (33277) BAT: raw=2968 | adc=2274 mV | batarya=3980 mV (3.98 V)[0m
+[0;32mI (34277) BAT: raw=2904 | adc=2228 mV | batarya=3899 mV (3.90 V)[0m
+[0;32mI (35277) BAT: raw=2862 | adc=2196 mV | batarya=3843 mV (3.84 V)[0m
+[0;32mI (36277) BAT: raw=2808 | adc=2157 mV | batarya=3775 mV (3.77 V)[0m
+[0;32mI (37277) BAT: raw=2729 | adc=2099 mV | batarya=3673 mV (3.67 V)[0m
+[0;32mI (38277) BAT: raw=2619 | adc=2017 mV | batarya=3530 mV (3.53 V)[0m
+[0;32mI (39277) BAT: raw=2491 | adc=1920 mV | batarya=3360 mV (3.36 V)[0m
+[0;32mI (40277) BAT: raw=2443 | adc=1885 mV | batarya=3299 mV (3.30 V)[0m
+[0;32mI (41277) BAT: raw=2383 | adc=1839 mV | batarya=3218 mV (3.22 V)[0m
+[0;32mI (42277) BAT: raw=2316 | adc=1789 mV | batarya=3131 mV (3.13 V)[0m
+[0;32mI (43277) BAT: raw=2263 | adc=1749 mV | batarya=3061 mV (3.06 V)[0m
+[0;32mI (44277) BAT: raw=2220 | adc=1716 mV | batarya=3003 mV (3.00 V)[0m
+[0;32mI (45277) BAT: raw=2199 | adc=1700 mV | batarya=2975 mV (2.97 V)[0m
+[0;32mI (46277) BAT: raw=2153 | adc=1665 mV | batarya=2914 mV (2.91 V)[0m
+[0;32mI (47277) BAT: raw=2107 | adc=1631 mV | batarya=2854 mV (2.85 V)[0m
+[0;32mI (48277) BAT: raw=2064 | adc=1598 mV | batarya=2796 mV (2.80 V)[0m
+[0;32mI (49277) BAT: raw=2039 | adc=1579 mV | batarya=2763 mV (2.76 V)[0m
+[0;32mI (50277) BAT: raw=1933 | adc=1498 mV | batarya=2622 mV (2.62 V)[0m
+[0;32mI (51277) BAT: raw=1880 | adc=1457 mV | batarya=2550 mV (2.55 V)[0m
+[0;32mI (52277) BAT: raw=1784 | adc=1384 mV | batarya=2422 mV (2.42 V)[0m
+[0;32mI (53277) BAT: raw=1720 | adc=1336 mV | batarya=2338 mV (2.34 V)[0m
+[0;32mI (54277) BAT: raw=1672 | adc=1297 mV | batarya=2270 mV (2.27 V)[0m
+[0;32mI (55277) BAT: raw=1675 | adc=1300 mV | batarya=2275 mV (2.28 V)[0m
+[0;32mI (56277) BAT: raw=1675 | adc=1300 mV | batarya=2275 mV (2.28 V)[0m
+[0;32mI (57277) BAT: raw=1676 | adc=1300 mV | batarya=2275 mV (2.28 V)[0m
+[0;32mI (58277) BAT: raw=1676 | adc=1300 mV | batarya=2275 mV (2.28 V)[0m
+[0;32mI (59277) BAT: raw=1676 | adc=1300 mV | batarya=2275 mV (2.28 V)[0m
+[0;32mI (60277) BAT: raw=1675 | adc=1300 mV | batarya=2275 mV (2.28 V)[0m
+[0;32mI (61277) BAT: raw=1676 | adc=1300 mV | batarya=2275 mV (2.28 V)[0m
+[0;32mI (62277) BAT: raw=1677 | adc=1301 mV | batarya=2277 mV (2.28 V)[0m
+[0;32mI (63277) BAT: raw=1675 | adc=1300 mV | batarya=2275 mV (2.28 V)[0m
+[0;32mI (64277) BAT: raw=1676 | adc=1300 mV | batarya=2275 mV (2.28 V)[0m
+[0;32mI (65277) BAT: raw=1676 | adc=1300 mV | batarya=2275 mV (2.28 V)[0m
+[0;32mI (66277) BAT: raw=1691 | adc=1313 mV | batarya=2298 mV (2.30 V)[0m
+[0;32mI (67277) BAT: raw=1755 | adc=1362 mV | batarya=2384 mV (2.38 V)[0m
+[0;32mI (68277) BAT: raw=1723 | adc=1338 mV | batarya=2342 mV (2.34 V)[0m
+[0;32mI (69277) BAT: raw=1706 | adc=1325 mV | batarya=2319 mV (2.32 V)[0m
+[0;32mI (70277) BAT: raw=1680 | adc=1304 mV | batarya=2282 mV (2.28 V)[0m
+[0;32mI (71277) BAT: raw=1677 | adc=1301 mV | batarya=2277 mV (2.28 V)[0m
+[0;32mI (72277) BAT: raw=1677 | adc=1301 mV | batarya=2277 mV (2.28 V)[0m
+[0;32mI (73277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (74277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (75277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (76277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (77277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (78277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (79277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (80277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (81277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (82277) BAT: raw=2425 | adc=1871 mV | batarya=3274 mV (3.27 V)[0m
+[0;32mI (83277) BAT: raw=2428 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (84277) BAT: raw=2425 | adc=1871 mV | batarya=3274 mV (3.27 V)[0m
+[0;32mI (85277) BAT: raw=2428 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (86277) BAT: raw=2425 | adc=1871 mV | batarya=3274 mV (3.27 V)[0m
+[0;32mI (87277) BAT: raw=2428 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (88277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (89277) BAT: raw=2428 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (90277) BAT: raw=2426 | adc=1872 mV | batarya=3276 mV (3.28 V)[0m
+[0;32mI (91277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (92277) BAT: raw=2427 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (93277) BAT: raw=2428 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (94277) BAT: raw=2428 | adc=1873 mV | batarya=3278 mV (3.28 V)[0m
+[0;32mI (95277) BAT: raw=2429 | adc=1874 mV | batarya=3280 mV (3.28 V)[0m

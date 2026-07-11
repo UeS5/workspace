@@ -1,0 +1,2 @@
+source /esp/workspace/test_programs/voltage_reader/build/gdbinit/symbols
+source /esp/workspace/test_programs/voltage_reader/build/gdbinit/connect

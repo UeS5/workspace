@@ -1,0 +1,86 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /esp/workspace/hud_display/build/bootloader/esp-idf/esptool_py && /home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python /esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /esp/workspace/hud_display/build/bootloader/bootloader.bin
+Bootloader binary size 0x5210 bytes. 0x2df0 bytes (36%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/hud_display.c.obj
+/esp/workspace/hud_display/main/hud_display.c: In function 'vTask_display':
+/esp/workspace/hud_display/main/hud_display.c:314:11: warning: unused variable 'battery' [-Wunused-variable]
+  314 |     led_t battery[3] = {
+      |           ^~~~~~~
+/esp/workspace/hud_display/main/hud_display.c:302:11: warning: unused variable 'led_buffer' [-Wunused-variable]
+  302 |     led_t led_buffer[30]; // Declare the LED array here to be used in the display functions
+      |           ^~~~~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating esp-idf/esp_system/ld/sections.ld
+[7/10] Linking CXX executable hud_display.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.11.dev1
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated /esp/workspace/hud_display/build/hud_display.bin
+[9/10] cd /esp/workspace/hud_display/build/esp-idf/esptool_py && /home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python /esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /esp/workspace/hud_display/build/partition_table/partition-table.bin /esp/workspace/hud_display/build/hud_display.bin
+hud_display.bin binary size 0xbfc30 bytes. Smallest app partition is 0x100000 bytes. 0x403d0 bytes (25%) free.
+[9/10] cd /esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/esp/esp-idf -D "SERIAL_TOOL=/home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python;;/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/esp/workspace/hud_display/build -P /esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 hud_display.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.11.dev1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-C3 (QFN32) (revision v0.4)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+MAC: 28:37:2f:50:5e:54
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000cffff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 21008 bytes to 13191...
+Writing at 0x00000000... (100 %)
+Wrote 21008 bytes (13191 compressed) at 0x00000000 in 0.7 seconds (effective 234.3 kbit/s)...
+Hash of data verified.
+Compressed 785456 bytes to 454015...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001ba75... (7 %)
+Writing at 0x0002447e... (10 %)
+Writing at 0x0002dc82... (14 %)
+Writing at 0x00034243... (17 %)
+Writing at 0x0003b4e1... (21 %)
+Writing at 0x00042aca... (25 %)
+Writing at 0x000491b0... (28 %)
+Writing at 0x0004f830... (32 %)
+Writing at 0x000566bc... (35 %)
+Writing at 0x0005c459... (39 %)
+Writing at 0x000621f3... (42 %)
+Writing at 0x000682b0... (46 %)
+Writing at 0x0006e67d... (50 %)
+Writing at 0x00074987... (53 %)
+Writing at 0x0007aab2... (57 %)
+Writing at 0x000812d7... (60 %)
+Writing at 0x0008822b... (64 %)
+Writing at 0x0008ee57... (67 %)
+Writing at 0x00095e73... (71 %)
+Writing at 0x0009c14e... (75 %)
+Writing at 0x000a24da... (78 %)
+Writing at 0x000a891c... (82 %)
+Writing at 0x000ae882... (85 %)
+Writing at 0x000b710a... (89 %)
+Writing at 0x000bd70d... (92 %)
+Writing at 0x000c47be... (96 %)
+Writing at 0x000cb1a4... (100 %)
+Wrote 785456 bytes (454015 compressed) at 0x00010000 in 13.1 seconds (effective 478.4 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 348.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

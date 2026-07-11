@@ -1,0 +1,2 @@
+source /esp/workspace/test_programs/bat_monitor/build/gdbinit/symbols
+source /esp/workspace/test_programs/bat_monitor/build/gdbinit/connect

@@ -1,0 +1,320 @@
+Command: /home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python /esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /esp/workspace/hud_adapter/build/hud_adapter.elf /esp/workspace/hud_adapter/build/bootloader/bootloader.elf -m '/home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xd (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time May 25 2026 17:30:29[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=15c2ch ( 89132) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=00025c54 vaddr=3fc94000 size=02e04h ( 11780) load[0m
+[0;32mI (107) esp_image: segment 2: paddr=00028a60 vaddr=40380000 size=075b8h ( 30136) load[0m
+[0;32mI (114) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=7ca58h (510552) map[0m
+[0;32mI (197) esp_image: segment 4: paddr=000aca80 vaddr=403875b8 size=0c958h ( 51544) load[0m
+[0;32mI (206) esp_image: segment 5: paddr=000b93e0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (213) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (213) boot: Disabling RNG early entropy source...[0m
+[0;32mI (224) cpu_start: Unicore app[0m
+[0;32mI (232) cpu_start: Pro cpu start user code[0m
+[0;32mI (232) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (232) app_init: Application information:[0m
+[0;32mI (232) app_init: Project name:     hud_adapter[0m
+[0;32mI (237) app_init: App version:      f4f0c80-dirty[0m
+[0;32mI (241) app_init: Compile time:     Jun 14 2026 15:02:50[0m
+[0;32mI (246) app_init: ELF file SHA256:  2134aab14...[0m
+[0;32mI (250) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (255) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (259) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (263) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (267) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (273) heap_init: At 3FC9A780 len 00025880 (150 KiB): RAM[0m
+[0;32mI (278) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (284) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (290) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;33mW (302) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (315) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (321) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (328) main_task: Started on CPU0[0m
+[0;32mI (338) main_task: Calling app_main()[0m
+[0;32mI (388) pp: pp rom version: 9387209[0m
+[0;32mI (388) net80211: net80211 rom version: 9387209[0m
+[0;32mI (408) wifi:wifi driver task: 3fca1f2c, prio:23, stack:6656, core=0[0m
+[0;32mI (408) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (408) wifi:wifi certification version: v7.0[0m
+[0;32mI (408) wifi:config NVS flash: enabled[0m
+[0;32mI (408) wifi:config nano formatting: disabled[0m
+[0;32mI (418) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (418) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (418) wifi:Init management short buffer num: 32[0m
+[0;32mI (428) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (428) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (438) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (438) wifi:Init static rx buffer num: 10[0m
+[0;32mI (448) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (448) wifi_init: rx ba win: 6[0m
+[0;32mI (448) wifi_init: accept mbox: 6[0m
+[0;32mI (448) wifi_init: tcpip mbox: 32[0m
+[0;32mI (458) wifi_init: udp mbox: 6[0m
+[0;32mI (458) wifi_init: tcp mbox: 6[0m
+[0;32mI (458) wifi_init: tcp tx win: 5760[0m
+[0;32mI (468) wifi_init: tcp rx win: 5760[0m
+[0;32mI (468) wifi_init: tcp mss: 1440[0m
+[0;32mI (468) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (478) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (478) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;33mW (488) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;32mI (518) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[1;31mE (528) wifi:failed to post WiFi event=43 ret=259[0m
+[0;32mI (528) wifi:mode : sta (28:37:2f:50:4a:e4)[0m
+[0;32mI (528) wifi:enable tsf[0m
+[1;31mE (528) wifi:failed to post WiFi event=2 ret=259[0m
+[0;32mI (538) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (538) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;32mI (588) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (588) main_task: Returned from app_main()[0m
+[0;32mI (828) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (1068) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (1308) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (1548) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (1788) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (2028) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (2268) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (2508) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (2748) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (2988) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (3228) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (3468) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (3708) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (3948) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (4188) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (4428) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (4668) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (4908) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (5148) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (5388) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (5628) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (5868) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (6108) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (6348) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (6588) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (6828) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (7068) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (7308) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (7548) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (7788) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (8028) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (8268) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (8508) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (8748) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (8988) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (9228) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (9468) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (9708) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (9948) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (10188) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (10428) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;33mW (10598) RECEIVE: >> Warning: No response from ECU for 10000 ms, going idle[0m
+[0;32mI (10598) ESPNOW: espnow [version: 2.0] deinit[0m
+[1;31mE (10618) wifi:failed to post WiFi event=3 ret=259[0m
+[0;32mI (10618) wifi:flush txq[0m
+[0;32mI (10618) wifi:stop sw txq[0m
+[0;32mI (10618) wifi:lmac stop hw txq[0m
+[0;32mI (10638) wifi:Deinit lldesc rx mblock:10[0m
+[0;32mI (10688) ESP-NOW: >> INFO: ESP-NOW stopped successfully[0m
+[0;32mI (10688) ESP-NOW: >> Info: ESP-NOW is now stopped[0m
+[0;32mI (10688) TWAI: >> INFO: TWAI node successfully disabled[0m
+[0;33mW (10688) IDLE MODE: INFO: Entering idle mode for 5 Seconds![0m
+[0;32mI (10688) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5000 milliseconds[0m
+[0;32mI (11698) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4000 milliseconds[0m
+[0;32mI (12698) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3000 milliseconds[0m
+[0;32mI (13698) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2000 milliseconds[0m
+[0;32mI (14698) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1000 milliseconds[0m
+[0;33mW (15698) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (15748) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (15988) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (16228) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (16468) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (16708) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (16948) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (17188) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (17428) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (17668) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (17908) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (18148) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (18388) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (18628) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (18868) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (19108) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (19348) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (19588) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (19828) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (20068) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (20308) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (20548) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (20748) IDLE MODE: >> INFO: Disabled twai node[0m
+[0;33mW (20748) IDLE MODE: INFO: Entering idle mode for 5 Seconds![0m
+[0;32mI (20748) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5000 milliseconds[0m
+[0;32mI (21748) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4001 milliseconds[0m
+[0;32mI (22748) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;32mI (23748) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2001 milliseconds[0m
+[0;32mI (24748) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1001 milliseconds[0m
+[0;32mI (25748) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1 milliseconds[0m
+[0;33mW (26748) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (26798) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (27038) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (27278) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (27518) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (27758) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (27998) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (28238) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (28478) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (28718) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (28958) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (29198) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (29438) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (29678) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (29918) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (30158) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (30398) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (30638) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (30878) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (31118) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (31358) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (31598) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (31798) IDLE MODE: >> INFO: Disabled twai node[0m
+[0;33mW (31798) IDLE MODE: INFO: Entering idle mode for 5 Seconds![0m
+[0;32mI (31798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5000 milliseconds[0m
+[0;32mI (32798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4001 milliseconds[0m
+[0;32mI (33798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;32mI (34798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2001 milliseconds[0m
+[0;32mI (35798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1001 milliseconds[0m
+[0;32mI (36798) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1 milliseconds[0m
+[0;33mW (37798) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (37848) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (38088) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (38328) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (38568) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (38808) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (39048) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (39288) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (39528) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (39768) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (40008) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (40248) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (40488) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (40728) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (40968) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (41208) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (41448) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (41688) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (41928) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (42168) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (42408) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (42648) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (42848) IDLE MODE: >> INFO: Disabled twai node[0m
+[0;33mW (42848) IDLE MODE: INFO: Entering idle mode for 5 Seconds![0m
+[0;32mI (42848) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5000 milliseconds[0m
+[0;32mI (43848) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4001 milliseconds[0m
+[0;32mI (44848) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;32mI (45848) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2001 milliseconds[0m
+[0;32mI (46848) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1001 milliseconds[0m
+[0;32mI (47848) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1 milliseconds[0m
+[0;33mW (48848) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (48898) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (49138) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (49378) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (49618) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (49858) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (50098) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (50338) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (50578) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (50818) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (51058) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (51298) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (51538) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (51778) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (52018) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (52258) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (52498) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (52738) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (52978) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (53218) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (53458) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (53698) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (53898) IDLE MODE: >> INFO: Disabled twai node[0m
+[0;33mW (53898) IDLE MODE: INFO: Entering idle mode for 5 Seconds![0m
+[0;32mI (53898) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5000 milliseconds[0m
+[0;32mI (54898) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4001 milliseconds[0m
+[0;32mI (55898) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;32mI (56898) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2001 milliseconds[0m
+[0;32mI (57898) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1001 milliseconds[0m
+[0;32mI (58898) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1 milliseconds[0m
+[0;33mW (59898) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (59948) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (60188) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (60428) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (60668) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (60908) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (61148) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (61388) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (61628) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (61868) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (62108) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (62348) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (62588) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (62828) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (63068) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (63308) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (63548) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (63788) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (64028) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (64268) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (64508) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (64748) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (64948) IDLE MODE: >> INFO: Disabled twai node[0m
+[0;33mW (64948) IDLE MODE: INFO: Entering idle mode for 5 Seconds![0m
+[0;32mI (64948) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 5000 milliseconds[0m
+[0;32mI (65948) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 4001 milliseconds[0m
+[0;32mI (66948) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;32mI (67948) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 2001 milliseconds[0m
+[0;32mI (68948) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1001 milliseconds[0m
+[0;32mI (69948) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 1 milliseconds[0m
+[0;33mW (70948) IDLE MODE: Warning: Woke-Up! Starting TWAI_send and TWAI_receive. Checking for signals[0m
+[0;32mI (70998) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (71238) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (71478) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (71718) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (71958) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (72198) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (72438) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (72678) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (72918) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (73158) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (73398) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (73638) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (73878) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (74118) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (74358) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (74598) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (74838) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (75078) TWAI: >> Info: speed_query sent: ESP_OK[0m
+[0;32mI (75318) TWAI: >> Info: engLoad_query sent: ESP_OK[0m
+[0;32mI (75558) TWAI: >> Info: speed_query sent: ESP_OK[0m

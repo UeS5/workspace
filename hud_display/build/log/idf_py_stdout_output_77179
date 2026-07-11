@@ -1,0 +1,493 @@
+Command: /home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python /esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /esp/workspace/hud_display/build/hud_display.elf /esp/workspace/hud_display/build/bootloader/bootloader.elf -m '/home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/esp/esp-idf/tools/idf.py'
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jun 29 2026 20:03:55[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=18714h (100116) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0002873c vaddr=3fc94400 size=02eech ( 12012) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0002b630 vaddr=40380000 size=049e8h ( 18920) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=901f4h (590324) map[0m
+[0;32mI (211) esp_image: segment 4: paddr=000c021c vaddr=403849e8 size=0f9e0h ( 63968) load[0m
+[0;32mI (223) esp_image: segment 5: paddr=000cfc04 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (230) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (230) boot: Disabling RNG early entropy source...[0m
+[0;32mI (241) cpu_start: Unicore app[0m
+[0;32mI (249) cpu_start: Pro cpu start user code[0m
+[0;32mI (249) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (249) app_init: Application information:[0m
+[0;32mI (249) app_init: Project name:     hud_display[0m
+[0;32mI (254) app_init: App version:      f4f0c80-dirty[0m
+[0;32mI (258) app_init: Compile time:     Jun 29 2026 20:03:49[0m
+[0;32mI (263) app_init: ELF file SHA256:  ebd9bdf0e...[0m
+[0;32mI (267) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (272) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (276) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (280) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (284) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (290) heap_init: At 3FC9B610 len 000249F0 (146 KiB): RAM[0m
+[0;32mI (295) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (301) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (307) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (314) spi_flash: detected chip: generic[0m
+[0;32mI (317) spi_flash: flash io: dio[0m
+[0;33mW (319) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (332) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (338) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (345) main_task: Started on CPU0[0m
+[0;32mI (355) main_task: Calling app_main()[0m
+[0;32mI (2515) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (2515) pp: pp rom version: 9387209[0m
+[0;32mI (2515) net80211: net80211 rom version: 9387209[0m
+[0;32mI (2525) wifi:wifi driver task: 3fca91d0, prio:23, stack:6656, core=0[0m
+[0;32mI (2525) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (2525) wifi:wifi certification version: v7.0[0m
+[0;32mI (2525) wifi:config NVS flash: enabled[0m
+[0;32mI (2525) wifi:config nano formatting: disabled[0m
+[0;32mI (2535) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2535) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2545) wifi:Init management short buffer num: 32[0m
+[0;32mI (2545) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2555) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (2555) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2565) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2565) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2565) wifi_init: rx ba win: 6[0m
+[0;32mI (2575) wifi_init: accept mbox: 6[0m
+[0;32mI (2575) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2575) wifi_init: udp mbox: 6[0m
+[0;32mI (2575) wifi_init: tcp mbox: 6[0m
+[0;32mI (2585) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2585) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2585) wifi_init: tcp mss: 1440[0m
+[0;32mI (2595) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2595) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2605) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (2635) wifi:mode : sta (28:37:2f:50:5e:54)[0m
+[0;32mI (2635) wifi:enable tsf[0m
+[0;32mI (2635) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (2635) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;33mW (5745) MAIN: ESP-NOW connection timeout after 3 seconds[0m
+[0;33mW (5745) IDLE MODE: INFO: Entering idle mode. (25 Seconds)[0m
+[0;32mI (5745) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 25000 milliseconds[0m
+[0;32mI (5745) ESPNOW: espnow [version: 2.0] deinit[0m
+[0;32mI (5775) wifi:flush txq[0m
+[0;32mI (5775) wifi:stop sw txq[0m
+[0;32mI (5775) wifi:lmac stop hw txq[0m
+[0;32mI (5795) wifi:Deinit lldesc rx mblock:10[0m
+[0;32mI (5845) ESP-NOW: INFO: ESP-NOW stopped successfully[0m
+[0;32mI (5845) main_task: Returned from app_main()[0m
+[0;32mI (11245) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 19501 milliseconds[0m
+[0;32mI (16745) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 14001 milliseconds[0m
+[0;32mI (22245) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8501 milliseconds[0m
+[0;32mI (27745) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;33mW (33245) IDLE MODE: Warning: Woke-Up! Starting ESP-NOW and receive. Checking for signals[0m
+[0;32mI (33245) pp: pp rom version: 9387209[0m
+[0;32mI (33245) net80211: net80211 rom version: 9387209[0m
+[0;32mI (33255) wifi:wifi driver task: 3fcafc88, prio:23, stack:6656, core=0[0m
+[0;32mI (33255) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (33255) wifi:wifi certification version: v7.0[0m
+[0;32mI (33255) wifi:config NVS flash: enabled[0m
+[0;32mI (33265) wifi:config nano formatting: disabled[0m
+[0;32mI (33265) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (33275) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (33275) wifi:Init management short buffer num: 32[0m
+[0;32mI (33285) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (33285) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (33285) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (33295) wifi:Init static rx buffer num: 10[0m
+[0;32mI (33295) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (33305) wifi_init: rx ba win: 6[0m
+[0;32mI (33305) wifi_init: accept mbox: 6[0m
+[0;32mI (33305) wifi_init: tcpip mbox: 32[0m
+[0;32mI (33315) wifi_init: udp mbox: 6[0m
+[0;32mI (33315) wifi_init: tcp mbox: 6[0m
+[0;32mI (33315) wifi_init: tcp tx win: 5760[0m
+[0;32mI (33325) wifi_init: tcp rx win: 5760[0m
+[0;32mI (33325) wifi_init: tcp mss: 1440[0m
+[0;32mI (33325) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (33335) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (33335) wifi:mode : sta (28:37:2f:50:5e:54)[0m
+[0;32mI (33335) wifi:enable tsf[0m
+[0;32mI (33345) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (33345) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;33mW (33445) IDLE MODE: INFO: Waiting for ESP-NOW connection signal for 5 Seconds![0m
+[0;33mW (38445) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;32mI (38445) ESPNOW: espnow [version: 2.0] deinit[0m
+[0;32mI (38465) wifi:flush txq[0m
+[0;32mI (38465) wifi:stop sw txq[0m
+[0;32mI (38465) wifi:lmac stop hw txq[0m
+[0;32mI (38485) wifi:Deinit lldesc rx mblock:10[0m
+[0;32mI (38535) ESP-NOW: INFO: ESP-NOW stopped successfully[0m
+[0;33mW (38535) IDLE MODE: INFO: Entering idle mode. (25 Seconds)[0m
+[0;32mI (38535) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 25000 milliseconds[0m
+[0;32mI (44035) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 19501 milliseconds[0m
+[0;32mI (49535) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 14001 milliseconds[0m
+[0;32mI (55035) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8501 milliseconds[0m
+[0;32mI (60535) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;33mW (66035) IDLE MODE: Warning: Woke-Up! Starting ESP-NOW and receive. Checking for signals[0m
+[0;32mI (66035) pp: pp rom version: 9387209[0m
+[0;32mI (66035) net80211: net80211 rom version: 9387209[0m
+[0;32mI (66045) wifi:wifi driver task: 3fcafdfc, prio:23, stack:6656, core=0[0m
+[0;32mI (66045) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (66045) wifi:wifi certification version: v7.0[0m
+[0;32mI (66045) wifi:config NVS flash: enabled[0m
+[0;32mI (66055) wifi:config nano formatting: disabled[0m
+[0;32mI (66055) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (66065) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (66065) wifi:Init management short buffer num: 32[0m
+[0;32mI (66075) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (66075) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (66075) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (66085) wifi:Init static rx buffer num: 10[0m
+[0;32mI (66085) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (66095) wifi_init: rx ba win: 6[0m
+[0;32mI (66095) wifi_init: accept mbox: 6[0m
+[0;32mI (66095) wifi_init: tcpip mbox: 32[0m
+[0;32mI (66105) wifi_init: udp mbox: 6[0m
+[0;32mI (66105) wifi_init: tcp mbox: 6[0m
+[0;32mI (66105) wifi_init: tcp tx win: 5760[0m
+[0;32mI (66115) wifi_init: tcp rx win: 5760[0m
+[0;32mI (66115) wifi_init: tcp mss: 1440[0m
+[0;32mI (66115) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (66125) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (66125) wifi:mode : sta (28:37:2f:50:5e:54)[0m
+[0;32mI (66125) wifi:enable tsf[0m
+[0;32mI (66135) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (66135) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;33mW (66235) IDLE MODE: INFO: Waiting for ESP-NOW connection signal for 5 Seconds![0m
+[0;33mW (71235) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;32mI (71235) ESPNOW: espnow [version: 2.0] deinit[0m
+[0;32mI (71255) wifi:flush txq[0m
+[0;32mI (71255) wifi:stop sw txq[0m
+[0;32mI (71255) wifi:lmac stop hw txq[0m
+[0;32mI (71275) wifi:Deinit lldesc rx mblock:10[0m
+[0;32mI (71325) ESP-NOW: INFO: ESP-NOW stopped successfully[0m
+[0;33mW (71325) IDLE MODE: INFO: Entering idle mode. (25 Seconds)[0m
+[0;32mI (71325) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 25000 milliseconds[0m
+[0;32mI (76825) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 19501 milliseconds[0m
+[0;32mI (82325) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 14001 milliseconds[0m
+[0;32mI (87825) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8501 milliseconds[0m
+[0;32mI (93325) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;33mW (98825) IDLE MODE: Warning: Woke-Up! Starting ESP-NOW and receive. Checking for signals[0m
+[0;32mI (98825) pp: pp rom version: 9387209[0m
+[0;32mI (98825) net80211: net80211 rom version: 9387209[0m
+[0;32mI (98835) wifi:wifi driver task: 3fcafdfc, prio:23, stack:6656, core=0[0m
+[0;32mI (98835) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (98835) wifi:wifi certification version: v7.0[0m
+[0;32mI (98835) wifi:config NVS flash: enabled[0m
+[0;32mI (98845) wifi:config nano formatting: disabled[0m
+[0;32mI (98845) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (98855) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (98855) wifi:Init management short buffer num: 32[0m
+[0;32mI (98865) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (98865) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (98865) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (98875) wifi:Init static rx buffer num: 10[0m
+[0;32mI (98875) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (98885) wifi_init: rx ba win: 6[0m
+[0;32mI (98885) wifi_init: accept mbox: 6[0m
+[0;32mI (98885) wifi_init: tcpip mbox: 32[0m
+[0;32mI (98895) wifi_init: udp mbox: 6[0m
+[0;32mI (98895) wifi_init: tcp mbox: 6[0m
+[0;32mI (98895) wifi_init: tcp tx win: 5760[0m
+[0;32mI (98905) wifi_init: tcp rx win: 5760[0m
+[0;32mI (98905) wifi_init: tcp mss: 1440[0m
+[0;32mI (98905) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (98915) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (98915) wifi:mode : sta (28:37:2f:50:5e:54)[0m
+[0;32mI (98915) wifi:enable tsf[0m
+[0;32mI (98925) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (98925) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;33mW (99025) IDLE MODE: INFO: Waiting for ESP-NOW connection signal for 5 Seconds![0m
+[0;33mW (104025) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;32mI (104025) ESPNOW: espnow [version: 2.0] deinit[0m
+[0;32mI (104045) wifi:flush txq[0m
+[0;32mI (104045) wifi:stop sw txq[0m
+[0;32mI (104045) wifi:lmac stop hw txq[0m
+[0;32mI (104065) wifi:Deinit lldesc rx mblock:10[0m
+[0;32mI (104115) ESP-NOW: INFO: ESP-NOW stopped successfully[0m
+[0;33mW (104115) IDLE MODE: INFO: Entering idle mode. (25 Seconds)[0m
+[0;32mI (104115) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 25000 milliseconds[0m
+[0;32mI (109615) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 19501 milliseconds[0m
+[0;32mI (115115) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 14001 milliseconds[0m
+[0;32mI (120615) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8501 milliseconds[0m
+[0;32mI (126115) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;33mW (131615) IDLE MODE: Warning: Woke-Up! Starting ESP-NOW and receive. Checking for signals[0m
+[0;32mI (131615) pp: pp rom version: 9387209[0m
+[0;32mI (131615) net80211: net80211 rom version: 9387209[0m
+[0;32mI (131625) wifi:wifi driver task: 3fcafdfc, prio:23, stack:6656, core=0[0m
+[0;32mI (131625) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (131625) wifi:wifi certification version: v7.0[0m
+[0;32mI (131625) wifi:config NVS flash: enabled[0m
+[0;32mI (131635) wifi:config nano formatting: disabled[0m
+[0;32mI (131635) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (131645) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (131645) wifi:Init management short buffer num: 32[0m
+[0;32mI (131655) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (131655) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (131665) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (131665) wifi:Init static rx buffer num: 10[0m
+[0;32mI (131665) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (131675) wifi_init: rx ba win: 6[0m
+[0;32mI (131675) wifi_init: accept mbox: 6[0m
+[0;32mI (131675) wifi_init: tcpip mbox: 32[0m
+[0;32mI (131685) wifi_init: udp mbox: 6[0m
+[0;32mI (131685) wifi_init: tcp mbox: 6[0m
+[0;32mI (131685) wifi_init: tcp tx win: 5760[0m
+[0;32mI (131695) wifi_init: tcp rx win: 5760[0m
+[0;32mI (131695) wifi_init: tcp mss: 1440[0m
+[0;32mI (131695) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (131705) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (131715) wifi:mode : sta (28:37:2f:50:5e:54)[0m
+[0;32mI (131715) wifi:enable tsf[0m
+[0;32mI (131715) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (131715) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;33mW (131825) IDLE MODE: INFO: Waiting for ESP-NOW connection signal for 5 Seconds![0m
+[0;33mW (136825) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;32mI (136825) ESPNOW: espnow [version: 2.0] deinit[0m
+[0;32mI (136845) wifi:flush txq[0m
+[0;32mI (136845) wifi:stop sw txq[0m
+[0;32mI (136845) wifi:lmac stop hw txq[0m
+[0;32mI (136865) wifi:Deinit lldesc rx mblock:10[0m
+[0;32mI (136915) ESP-NOW: INFO: ESP-NOW stopped successfully[0m
+[0;33mW (136915) IDLE MODE: INFO: Entering idle mode. (25 Seconds)[0m
+[0;32mI (136915) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 25000 milliseconds[0m
+[0;32mI (142415) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 19501 milliseconds[0m
+[0;32mI (147915) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 14001 milliseconds[0m
+[0;32mI (153415) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8501 milliseconds[0m
+[0;32mI (158915) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;33mW (164415) IDLE MODE: Warning: Woke-Up! Starting ESP-NOW and receive. Checking for signals[0m
+[0;32mI (164415) pp: pp rom version: 9387209[0m
+[0;32mI (164415) net80211: net80211 rom version: 9387209[0m
+[0;32mI (164425) wifi:wifi driver task: 3fcafdfc, prio:23, stack:6656, core=0[0m
+[0;32mI (164425) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (164425) wifi:wifi certification version: v7.0[0m
+[0;32mI (164425) wifi:config NVS flash: enabled[0m
+[0;32mI (164435) wifi:config nano formatting: disabled[0m
+[0;32mI (164435) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (164445) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (164445) wifi:Init management short buffer num: 32[0m
+[0;32mI (164455) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (164455) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (164465) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (164465) wifi:Init static rx buffer num: 10[0m
+[0;32mI (164465) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (164475) wifi_init: rx ba win: 6[0m
+[0;32mI (164475) wifi_init: accept mbox: 6[0m
+[0;32mI (164475) wifi_init: tcpip mbox: 32[0m
+[0;32mI (164485) wifi_init: udp mbox: 6[0m
+[0;32mI (164485) wifi_init: tcp mbox: 6[0m
+[0;32mI (164485) wifi_init: tcp tx win: 5760[0m
+[0;32mI (164495) wifi_init: tcp rx win: 5760[0m
+[0;32mI (164495) wifi_init: tcp mss: 1440[0m
+[0;32mI (164495) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (164505) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (164515) wifi:mode : sta (28:37:2f:50:5e:54)[0m
+[0;32mI (164515) wifi:enable tsf[0m
+[0;32mI (164515) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (164515) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;33mW (164625) IDLE MODE: INFO: Waiting for ESP-NOW connection signal for 5 Seconds![0m
+[0;33mW (169625) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;32mI (169625) ESPNOW: espnow [version: 2.0] deinit[0m
+[0;32mI (169645) wifi:flush txq[0m
+[0;32mI (169645) wifi:stop sw txq[0m
+[0;32mI (169645) wifi:lmac stop hw txq[0m
+[0;32mI (169665) wifi:Deinit lldesc rx mblock:10[0m
+[0;32mI (169715) ESP-NOW: INFO: ESP-NOW stopped successfully[0m
+[0;33mW (169715) IDLE MODE: INFO: Entering idle mode. (25 Seconds)[0m
+[0;32mI (169715) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 25000 milliseconds[0m
+[0;32mI (175215) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 19501 milliseconds[0m
+[0;32mI (180715) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 14001 milliseconds[0m
+[0;32mI (186215) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8501 milliseconds[0m
+[0;32mI (191715) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;33mW (197215) IDLE MODE: Warning: Woke-Up! Starting ESP-NOW and receive. Checking for signals[0m
+[0;32mI (197215) pp: pp rom version: 9387209[0m
+[0;32mI (197215) net80211: net80211 rom version: 9387209[0m
+[0;32mI (197225) wifi:wifi driver task: 3fcafdfc, prio:23, stack:6656, core=0[0m
+[0;32mI (197225) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (197225) wifi:wifi certification version: v7.0[0m
+[0;32mI (197225) wifi:config NVS flash: enabled[0m
+[0;32mI (197235) wifi:config nano formatting: disabled[0m
+[0;32mI (197235) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (197245) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (197245) wifi:Init management short buffer num: 32[0m
+[0;32mI (197255) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (197255) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (197265) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (197265) wifi:Init static rx buffer num: 10[0m
+[0;32mI (197265) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (197275) wifi_init: rx ba win: 6[0m
+[0;32mI (197275) wifi_init: accept mbox: 6[0m
+[0;32mI (197275) wifi_init: tcpip mbox: 32[0m
+[0;32mI (197285) wifi_init: udp mbox: 6[0m
+[0;32mI (197285) wifi_init: tcp mbox: 6[0m
+[0;32mI (197285) wifi_init: tcp tx win: 5760[0m
+[0;32mI (197295) wifi_init: tcp rx win: 5760[0m
+[0;32mI (197295) wifi_init: tcp mss: 1440[0m
+[0;32mI (197295) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (197305) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (197315) wifi:mode : sta (28:37:2f:50:5e:54)[0m
+[0;32mI (197315) wifi:enable tsf[0m
+[0;32mI (197315) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (197315) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;33mW (197425) IDLE MODE: INFO: Waiting for ESP-NOW connection signal for 5 Seconds![0m
+[0;33mW (202425) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;32mI (202425) ESPNOW: espnow [version: 2.0] deinit[0m
+[0;32mI (202445) wifi:flush txq[0m
+[0;32mI (202445) wifi:stop sw txq[0m
+[0;32mI (202445) wifi:lmac stop hw txq[0m
+[0;32mI (202465) wifi:Deinit lldesc rx mblock:10[0m
+[0;32mI (202515) ESP-NOW: INFO: ESP-NOW stopped successfully[0m
+[0;33mW (202515) IDLE MODE: INFO: Entering idle mode. (25 Seconds)[0m
+[0;32mI (202515) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 25000 milliseconds[0m
+[0;32mI (208015) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 19501 milliseconds[0m
+[0;32mI (213515) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 14001 milliseconds[0m
+[0;32mI (219015) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 8501 milliseconds[0m
+[0;32mI (224515) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 3001 milliseconds[0m
+[0;33mW (230015) IDLE MODE: Warning: Woke-Up! Starting ESP-NOW and receive. Checking for signals[0m
+[0;32mI (230015) pp: pp rom version: 9387209[0m
+[0;32mI (230015) net80211: net80211 rom version: 9387209[0m
+[0;32mI (230025) wifi:wifi driver task: 3fcafdfc, prio:23, stack:6656, core=0[0m
+[0;32mI (230025) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (230025) wifi:wifi certification version: v7.0[0m
+[0;32mI (230025) wifi:config NVS flash: enabled[0m
+[0;32mI (230035) wifi:config nano formatting: disabled[0m
+[0;32mI (230035) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (230045) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (230045) wifi:Init management short buffer num: 32[0m
+[0;32mI (230055) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (230055) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (230065) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (230065) wifi:Init static rx buffer num: 10[0m
+[0;32mI (230065) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (230075) wifi_init: rx ba win: 6[0m
+[0;32mI (230075) wifi_init: accept mbox: 6[0m
+[0;32mI (230075) wifi_init: tcpip mbox: 32[0m
+[0;32mI (230085) wifi_init: udp mbox: 6[0m
+[0;32mI (230085) wifi_init: tcp mbox: 6[0m
+[0;32mI (230085) wifi_init: tcp tx win: 5760[0m
+[0;32mI (230095) wifi_init: tcp rx win: 5760[0m
+[0;32mI (230095) wifi_init: tcp mss: 1440[0m
+[0;32mI (230095) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (230105) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (230115) wifi:mode : sta (28:37:2f:50:5e:54)[0m
+[0;32mI (230115) wifi:enable tsf[0m
+[0;32mI (230115) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (230115) ESP-NOW: INFO: ESP-NOW started succesfully![0m
+[0;33mW (230225) IDLE MODE: INFO: Waiting for ESP-NOW connection signal for 5 Seconds![0m
+[0;33mW (235225) IDLE MODE: WARNING: No signal. Stopping ESP-NOW and Receive. Starting over![0m
+[0;32mI (235225) ESPNOW: espnow [version: 2.0] deinit[0m
+[0;32mI (235245) wifi:flush txq[0m
+[0;32mI (235245) wifi:stop sw txq[0m
+[0;32mI (235245) wifi:lmac stop hw txq[0m
+[0;32mI (235265) wifi:Deinit lldesc rx mblock:10[0m
+[0;32mI (235315) ESP-NOW: INFO: ESP-NOW stopped successfully[0m
+[0;33mW (235315) IDLE MODE: INFO: Entering idle mode. (25 Seconds)[0m
+[0;32mI (235315) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 25000 milliseconds[0m
+[0;32mI (240815) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 19501 milliseconds[0m
+[0;32mI (246315) IDLE MODE: >> Info: Idle mode active, waiting for wake-up signal. Time left: 14001 milliseconds[0m
+E �ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0xf (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xc34
+load:0x403ce710,len:0x2fd0
+entry 0x403cbf1a
+[0;32mI (30) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Jun 29 2026 20:03:55[0m
+[0;32mI (30) boot: chip revision: v0.4[0m
+[0;32mI (31) boot: efuse block revision: v1.3[0m
+[0;32mI (35) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (39) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3c0a0020 size=18714h (100116) map[0m
+[0;32mI (106) esp_image: segment 1: paddr=0002873c vaddr=3fc94400 size=02eech ( 12012) load[0m
+[0;32mI (108) esp_image: segment 2: paddr=0002b630 vaddr=40380000 size=049e8h ( 18920) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=901f4h (590324) map[0m
+[0;32mI (211) esp_image: segment 4: paddr=000c021c vaddr=403849e8 size=0f9e0h ( 63968) load[0m
+[0;32mI (223) esp_image: segment 5: paddr=000cfc04 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (230) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (230) boot: Disabling RNG early entropy source...[0m
+[0;32mI (241) cpu_start: Unicore app[0m
+[0;32mI (249) cpu_start: Pro cpu start user code[0m
+[0;32mI (249) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (249) app_init: Application information:[0m
+[0;32mI (249) app_init: Project name:     hud_display[0m
+[0;32mI (254) app_init: App version:      f4f0c80-dirty[0m
+[0;32mI (258) app_init: Compile time:     Jun 29 2026 20:03:49[0m
+[0;32mI (263) app_init: ELF file SHA256:  ebd9bdf0e...[0m
+[0;32mI (267) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (272) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (276) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (280) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (284) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (290) heap_init: At 3FC9B610 len 000249F0 (146 KiB): RAM[0m
+[0;32mI (295) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (301) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (307) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (314) spi_flash: detected chip: generic[0m
+[0;32mI (317) spi_flash: flash io: dio[0m
+[0;33mW (319) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (332) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (338) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (345) main_task: Started on CPU0[0m
+[0;32mI (355) main_task: Calling app_main()[0m
+[0;32mI (2515) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (2515) pp: pp rom version: 9387209[0m
+[0;32mI (2515) net80211: net80211 rom version: 9387209[0m
+[0;32mI (2525) wifi:wifi driver task: 3fca91d0, prio:23, stack:6656, core=0[0m
+[0;32mI (2525) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (2525) wifi:wifi certification version: v7.0[0m
+[0;32mI (2525) wifi:config NVS flash: enabled[0m
+[0;32mI (2525) wifi:config nano formatting: disabled[0m
+[0;32mI (2535) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (2535) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (2545) wifi:Init management short buffer num: 32[0m
+[0;32mI (2545) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (2555) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (2555) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (2565) wifi:Init static rx buffer num: 10[0m
+[0;32mI (2565) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (2565) wifi_init: rx ba win: 6[0m
+[0;32mI (2575) wifi_init: accept mbox: 6[0m
+[0;32mI (2575) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2575) wifi_init: udp mbox: 6[0m
+[0;32mI (2575) wifi_init: tcp mbox: 6[0m
+[0;32mI (2585) wifi_init: tcp tx win: 5760[0m
+[0;32mI (2585) wifi_init: tcp rx win: 5760[0m
+[0;32mI (2585) wifi_init: tcp mss: 1440[0m
+[0;32mI (2595) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2595) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (2605) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+[0;32mI (2635) wifi:mode : sta (28:37:2f:50:5e:54)[0m
+[0;32mI (2635) wifi:enable tsf[0m
+[0;32mI (2635) ESPNOW: espnow [version: 2.0] init[0m
+[0;32mI (2635) ESP-NOW: INFO: ESP-NOW started succesfully![0m

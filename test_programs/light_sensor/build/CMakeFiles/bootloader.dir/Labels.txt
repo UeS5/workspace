@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/esp/workspace/test_programs/light_sensor/build/CMakeFiles/bootloader
+/esp/workspace/test_programs/light_sensor/build/CMakeFiles/bootloader.rule
+/esp/workspace/test_programs/light_sensor/build/CMakeFiles/bootloader-complete.rule
+/esp/workspace/test_programs/light_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/esp/workspace/test_programs/light_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/esp/workspace/test_programs/light_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/esp/workspace/test_programs/light_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/esp/workspace/test_programs/light_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/esp/workspace/test_programs/light_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/esp/workspace/test_programs/light_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

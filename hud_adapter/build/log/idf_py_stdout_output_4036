@@ -1,0 +1,1682 @@
+Command: /home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python /esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c3 --revision 3 --decode-panic backtrace /esp/workspace/hud_adapter/build/hud_adapter.elf /esp/workspace/hud_adapter/build/bootloader/bootloader.elf -m '/home/user/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/esp/esp-idf/tools/idf.py'
+re to isolate all GPIO pins in sleep state
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+[0;32mI (215) esp_image: segment 4: paddr=000bf2f4 vaddr=40384f50 size=0efcch ( 61388) load[0m
+[0;32mI (227) esp_image: segment 5: paddr=000ce2c8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (233) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (233) boot: Disabling RNG early entropy source...[0m
+[0;32mI (244) cpu_start: Unicore app[0m
+[0;32mI (253) cpu_start: Pro cpu start user code[0m
+[0;32mI (253) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (253) app_init: Application information:[0m
+[0;32mI (253) app_init: Project name:     display[0m
+[0;32mI (257) app_init: App version:      b3c60a3-dirty[0m
+[0;32mI (261) app_init: Compile time:     Apr 19 2026 14:01:15[0m
+[0;32mI (266) app_init: ELF file SHA256:  6d20105e3...[0m
+[0;32mI (271) app_init: ESP-IDF:          HEAD-HASH-NOTFOUND[0m
+[0;32mI (275) efuse_init: Min chip rev:     v0.3[0m
+[0;32mI (279) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (283) efuse_init: Chip rev:         v0.4[0m
+[0;32mI (287) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (293) heap_init: At 3FC9B1B0 len 00024E50 (147 KiB): RAM[0m
+[0;32mI (298) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (305) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (311) heap_init: At 50000020 len 00001FC8 (7 KiB): RTCRAM[0m
+[0;32mI (317) spi_flash: detected chip: generic[0m
+[0;32mI (320) spi_flash: flash io: dio[0m
+[0;32mI (323) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (329) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (336) main_task: Started on CPU0[0m
+[0;32mI (366) main_task: Calling app_main()[0m
+[0;32mI (366) IDLE MODE: Idle mode started for energy saving[0m
+[0;32mI (366) pp: pp rom version: 9387209[0m
+[0;32mI (366) net80211: net80211 rom version: 9387209[0m
+[0;32mI (376) wifi:wifi driver task: 3fca8df0, prio:23, stack:6656, core=0[0m
+[0;32mI (376) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (376) wifi:wifi certification version: v7.0[0m
+[0;32mI (376) wifi:config NVS flash: enabled[0m
+[0;32mI (386) wifi:config nano formatting: disabled[0m
+[0;32mI (386) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (396) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (396) wifi:Init management short buffer num: 32[0m
+[0;32mI (406) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (406) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (406) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (416) wifi:Init static rx buffer num: 10[0m
+[0;32mI (416) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (426) wifi_init: rx ba win: 6[0m
+[0;32mI (426) wifi_init: accept mbox: 6[0m
+[0;32mI (426) wifi_init: tcpip mbox: 32[0m
+[0;32mI (426) wifi_init: udp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp mbox: 6[0m
+[0;32mI (436) wifi_init: tcp tx win: 5760[0m
+[0;32mI (436) wifi_init: tcp rx win: 5760[0m
+[0;32mI (446) wifi_init: tcp mss: 1440[0m
+[0;32mI (446) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (446) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (456) phy_init: phy_version 1201,bae5dd99,Mar  3 2025,15:36:21[0m
+E BOD: Brownout detector was triggered
+
+
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x15ac
+load:0x403cbf10,len:0xd64
+load:0x403ce710,len:0x2fb4
+entry 0x403cbf1a
+[0;32mI (35) boot: ESP-IDF HEAD-HASH-NOTFOUND 2nd stage bootloader[0m
+[0;32mI (35) boot: compile time Apr 19 2026 10:35:38[0m
+[0;32mI (35) boot: chip revision: v0.4[0m
+[0;32mI (36) boot: efuse block revision: v1.3[0m
+[0;32mI (40) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (84) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=1820ch ( 98828) map[0m
+[0;32mI (111) esp_image: segment 1: paddr=00028234 vaddr=3fc94000 size=02e8ch ( 11916) load[0m
+[0;32mI (113) esp_image: segment 2: paddr=0002b0c8 vaddr=40380000 size=04f50h ( 20304) load[0m
+[0;32mI (118) esp_image: segment 3: paddr=00030020 vaddr=42000020 size=8f2cch (586444) map[0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x1 (POWERON),boot:0x7 (DOWNLOAD(USB/UART0/1))
+waiting for download
